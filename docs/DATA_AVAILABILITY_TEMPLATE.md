@@ -1,12 +1,7 @@
-# Data Availability Statement — draft (not for submission until published)
+# Data Availability Statement — archived research package
 
-The research-team-owned synthetic IFC models, controlled mutation definitions,
-source code, ontology, checking rules, and synthetic experimental results are
-available through the versioned public research repository [insert actual
-Zenodo DOI after publication]. The externally provided IFC model used in the
-large-model experiments is not included, because the authors have not obtained
-permission to redistribute it. The source provider is not identified.
-Model-specific experiment reproduction therefore requires separately authorized
-access to the source model or other suitable IFC data.
+The synthetic IFC test fixtures, 72-case mutation protocol, recorded experimental results, source code, ontology, and semantic checking rules supporting the controlled synthetic experiments are publicly available in the versioned research archive **Change-Aware BIM Compliance Checking: Code and Synthetic IFC Reproducibility Package** (version 1.0.0; Zenodo record: https://zenodo.org/records/24406900; source repository: https://github.com/Amirh18/change-aware-bim-compliance).
 
-**Do not assert public availability until the release is actually online.**
+The public package supports reproduction of the synthetic mutation experiments; it does not provide the third-party IFC model used in the separate large-model evaluation. That model is excluded from redistribution because authorization for public sharing has not been established. Reproduction of the large-model experiments requires access to an independently authorized model and may not yield identical numerical results with a different dataset.
+
+**Citation note:** Confirm the version-specific DOI, creators, and licensing displayed on the Zenodo landing page before replacing the record URL with the DOI in the manuscript.
