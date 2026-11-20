@@ -11,7 +11,8 @@ the 72-case controlled mutation protocol, and the associated recorded experiment
 It does **not** contain the externally supplied IFC model used in the manuscript's
 larger-model case study. The complete 72-case synthetic mutation study was rerun
 successfully in the supported environment; see `docs/REPRODUCTION_VALIDATION.md`.
-Public release and DOI registration remain separate publication steps.
+The release is linked to a Zenodo archival record: https://zenodo.org/records/24406900.
+The version-specific DOI and record metadata should be verified on Zenodo before citation.
 
 ## Repository layout
 
@@ -121,13 +122,15 @@ python src/benchmark_full_pipeline.py --models "data/fixtures/stair_mep_mutation
 Software and ontology: **MIT**. Original synthetic IFC fixtures, mutation definitions,
 recorded results and documentation: **CC BY 4.0**. See `LICENSES.md`.
 
-Use `CITATION.cff` for repository citation metadata. A Zenodo DOI should be added **only
-when the tagged release has actually been archived**. Do not cite an unassigned DOI.
+See the [Zenodo archival record](https://zenodo.org/records/24406900) for the versioned deposit.
+Use `CITATION.cff` for repository citation metadata. Verify the version DOI from Zenodo
+before inserting it into the manuscript; do not substitute the concept DOI accidentally.
 
-## Publication status
+## Release status
 
-- The research team approved MIT for code and CC BY 4.0 for the synthetic dataset.
+- The repository is public and the user supplied the versioned Zenodo record: https://zenodo.org/records/24406900.
 - The regression and 72-case study were rerun in Python 3.11.1 (see validation report).
-- The externally supplied model is excluded from this repository.
-- A versioned Zenodo DOI has **not** yet been assigned; do not cite a placeholder DOI.
-- Before public release, reconfirm coauthor approval of the exact published files and check for confidential material.
+- The externally supplied model is excluded from the public package.
+- The MIT code license and CC BY 4.0 synthetic-data license are explained in `LICENSES.md`.
+- Confirm the DOI, authors, and license metadata on Zenodo before using the archive citation in a manuscript.
+- Updates to this branch **after** the tagged release do not change the already archived v1.0.0 snapshot.
