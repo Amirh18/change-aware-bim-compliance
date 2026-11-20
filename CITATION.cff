@@ -1,9 +1,11 @@
 cff-version: 1.2.0
 message: >-
-  Cite the versioned Zenodo archive when its DOI becomes available,
+  Cite the specific versioned Zenodo research record,
   together with the associated journal manuscript.
 title: "Change-Aware BIM Compliance Checking: Code and Synthetic IFC Reproducibility Package"
 type: software
+version: "1.0.0"
+url: "https://zenodo.org/records/24406900"
 authors:
   - family-names: Asgari
     given-names: Amirhossein
