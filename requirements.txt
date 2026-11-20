@@ -1,0 +1,5 @@
+# Tested local environment recorded in the experimental JSON reports (Windows 10; Python 3.11.1).
+# Versions are pinned for reproducibility; platform wheel compatibility must be checked.
+ifcopenshell==0.9.0.post1
+rdflib==7.6.0
+pyshacl==0.40.2

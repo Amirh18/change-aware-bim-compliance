@@ -1,0 +1,27 @@
+# Local Python and editor files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.idea/
+.vscode/
+
+# Locally generated benchmark output
+smoke.json
+reproduced_72.json
+baseline_local.json
+baseline_timing_local.json
+
+# Never commit unapproved IFC files by accident.
+*.ifc
+!data/fixtures/stair_mep_mutation_base.ifc
+!data/fixtures/stair_mep_illustrative_pass.ifc
+
+# Do not commit large-model-derived reports or privately sourced inputs.
+ifc_edit_diff*.json
+ifc_handrail*.json
+large_model*.json
+STAIR*.ifc
+*.bak
+smoke.csv

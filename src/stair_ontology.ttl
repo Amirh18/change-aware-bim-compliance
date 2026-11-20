@@ -1,0 +1,236 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/stairOntology#> .
+@prefix ifc: <https://w3id.org/ifc/IFC4_ADD2#> .
+
+:stairOntology rdf:type owl:Ontology ;
+    rdfs:comment "Ontology for stair, railing, and MEP compliance checking" ;
+    owl:versionInfo "1.0" .
+
+###############################################################
+# Classes
+###############################################################
+
+:BuildingStorey rdf:type owl:Class ;
+    rdfs:label "Building Storey" ;
+    rdfs:comment "A storey level within a building" ;
+    :ifcMapping "IfcBuildingStorey" .
+
+:Stair rdf:type owl:Class ;
+    rdfs:label "Stair" ;
+    rdfs:comment "A staircase consisting of one or more flights" ;
+    :ifcMapping "IfcStair" .
+
+:StairFlight rdf:type owl:Class ;
+    rdfs:label "Stair Flight" ;
+    rdfs:comment "A single continuous run of stairs" ;
+    :ifcMapping "IfcStairFlight" .
+
+:Railing rdf:type owl:Class ;
+    rdfs:label "Railing" ;
+    rdfs:comment "A railing element (handrail or guardrail)" ;
+    :ifcMapping "IfcRailing" .
+
+:Guardrail rdf:type owl:Class ;
+    rdfs:subClassOf :Railing ;
+    rdfs:label "Guardrail" ;
+    rdfs:comment "Safety railing typically at height >= 1100mm" .
+
+:Handrail rdf:type owl:Class ;
+    rdfs:subClassOf :Railing ;
+    rdfs:label "Handrail" ;
+    rdfs:comment "Railing for grasping, typical height 900-1000mm" .
+
+:FireSuppressionTerminal rdf:type owl:Class ;
+    rdfs:label "Fire Suppression Terminal" ;
+    :ifcMapping "IfcFireSuppressionTerminal" .
+
+:FireHoseValve rdf:type owl:Class ;
+    rdfs:subClassOf :FireSuppressionTerminal ;
+    rdfs:label "Fire Hose Valve" .
+
+:FireExtinguisherCabinet rdf:type owl:Class ;
+    rdfs:subClassOf :FireSuppressionTerminal ;
+    rdfs:label "Fire Extinguisher Cabinet" .
+
+:ManualPullStation rdf:type owl:Class ;
+    rdfs:subClassOf :FireSuppressionTerminal ;
+    rdfs:label "Manual Pull Station" .
+
+:FlowSegment rdf:type owl:Class ;
+    rdfs:label "Flow Segment (Pipe/Duct)" ;
+    :ifcMapping "IfcFlowSegment" .
+
+:FlowController rdf:type owl:Class ;
+    rdfs:label "Flow Controller (Panel)" ;
+    :ifcMapping "IfcFlowController" .
+
+:Outlet rdf:type owl:Class ;
+    rdfs:label "Electrical Outlet" ;
+    :ifcMapping "IfcOutlet" .
+
+###############################################################
+# Object Properties (Relationships)
+###############################################################
+
+:isPartOf rdf:type owl:ObjectProperty ;
+    rdf:type owl:TransitiveProperty ;
+    rdfs:label "is part of" ;
+    rdfs:domain [ owl:unionOf ( :StairFlight :Railing :Stair ) ] ;
+    rdfs:range [ owl:unionOf ( :Stair :BuildingStorey ) ] ;
+    rdfs:comment "Indicates part-whole hierarchy (flight->stair->storey)" .
+
+:hasFlight rdf:type owl:ObjectProperty ;
+    rdfs:label "has flight" ;
+    rdfs:domain :Stair ;
+    rdfs:range :StairFlight ;
+    rdfs:comment "Reverse link only for the Stair-to-StairFlight containment relation" .
+
+:isContainedInStorey rdf:type owl:ObjectProperty ;
+    rdfs:label "is contained in storey" ;
+    rdfs:domain [ owl:unionOf ( :StairFlight :Stair :Railing ) ] ;
+    rdfs:range :BuildingStorey ;
+    owl:propertyChainAxiom ( :isPartOf :isPartOf ) ;
+    rdfs:comment "Inferred: flight -> stair -> storey => flight contained in storey" .
+
+:hasRailing rdf:type owl:ObjectProperty ;
+    rdfs:label "has railing" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range :Railing ;
+    rdfs:comment "Links a stair flight to its associated railing" .
+
+:hasMEPComponent rdf:type owl:ObjectProperty ;
+    rdfs:label "has MEP component" ;
+    rdfs:domain :BuildingStorey ;
+    rdfs:range [ owl:unionOf ( :FireSuppressionTerminal :FlowSegment :FlowController :Outlet ) ] ;
+    rdfs:comment "Links a storey to its MEP components (optional)" .
+
+###############################################################
+# Data Properties (Parameters)
+###############################################################
+
+:hasRiserHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "riser height" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Riser height in mm (h)" .
+
+:hasTreadLength rdf:type owl:DatatypeProperty ;
+    rdfs:label "tread length" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Tread/going length in mm (g)" .
+
+:hasNosingLength rdf:type owl:DatatypeProperty ;
+    rdfs:label "nosing length" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Nosing or overlap length in mm (r)" .
+
+:hasNumberOfRisers rdf:type owl:DatatypeProperty ;
+    rdf:type owl:FunctionalProperty ;
+    rdfs:label "number of risers" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Total number of risers in this flight (n)" .
+
+:hasClimbHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "climb height" ;
+    rdfs:domain :StairFlight ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Total vertical climb = h * n (mm)" .
+
+:hasRailingHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "railing height (generic)" ;
+    rdfs:domain :Railing ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Generic railing height in mm (used when type unknown)" .
+
+:hasGuardrailHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "guardrail height" ;
+    rdfs:domain :Guardrail ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Height of guardrail in mm" .
+
+:hasHandrailHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "handrail height" ;
+    rdfs:domain :Handrail ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Height of handrail in mm" .
+
+:hasRailingType rdf:type owl:DatatypeProperty ;
+    rdfs:label "railing type" ;
+    rdfs:domain :Railing ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Value: guardrail, handrail, or unknown" .
+
+:hasDiameter rdf:type owl:DatatypeProperty ;
+    rdfs:label "diameter" ;
+    rdfs:domain :FlowSegment ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Pipe diameter in mm" .
+
+:hasWidth rdf:type owl:DatatypeProperty ;
+    rdfs:label "width" ;
+    rdfs:domain :FlowController ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Panel width in mm" .
+
+:hasDepth rdf:type owl:DatatypeProperty ;
+    rdfs:label "depth" ;
+    rdfs:domain [ owl:unionOf ( :FlowController :FireExtinguisherCabinet ) ] ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Depth in mm (cabinet or panel)" .
+
+:hasHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "height" ;
+    rdfs:domain :FlowController ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Panel height in mm" .
+
+:hasInstallationHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "installation height" ;
+    rdfs:domain [ owl:unionOf ( :FireSuppressionTerminal :Outlet ) ] ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Height above floor in mm" .
+
+:hasCabinetDepth rdf:type owl:DatatypeProperty ;
+    rdfs:label "cabinet depth" ;
+    rdfs:domain :FireExtinguisherCabinet ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Depth of fire cabinet in mm" .
+
+:hasFireHoseHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "fire hose valve height" ;
+    rdfs:domain :FireHoseValve ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Installation height of fire hose valve in mm" .
+
+:hasOutletHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "outlet height" ;
+    rdfs:domain :Outlet ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Installation height of electrical outlet in mm" .
+
+###############################################################
+# Disjointness Axioms
+###############################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :StairFlight :Railing ) ] .
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Guardrail :Handrail ) ] .
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :FireHoseValve :FireExtinguisherCabinet :ManualPullStation ) ] .
+
+###############################################################
+# Annotation Property for IFC Mapping
+###############################################################
+
+:ifcMapping rdf:type owl:AnnotationProperty ;
+    rdfs:label "IFC mapping" ;
+    rdfs:comment "Indicates the corresponding IFC class name for documentation purposes" .

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: >-
+  Cite the versioned Zenodo archive when its DOI becomes available,
+  together with the associated journal manuscript.
+title: "Change-Aware BIM Compliance Checking: Code and Synthetic IFC Reproducibility Package"
+type: software
+authors:
+  - family-names: Asgari
+    given-names: Amirhossein
+  - family-names: Taghaddos
+    given-names: Hosein
+  - family-names: Ramezanianpour
+    given-names: Amirmohammad
+repository-code: "https://github.com/Amirh18/change-aware-bim-compliance"
+keywords:
+  - BIM
+  - IFC
+  - SHACL
+  - SPARQL
+  - RDF
+  - construction compliance checking
+license: MIT

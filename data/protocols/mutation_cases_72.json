@@ -1,0 +1,1104 @@
+{
+  "notice": "Prospective analytical cases, not measurements from IFC or semantic graph",
+  "cases": [
+    {
+      "case_id": "M001",
+      "targets": [
+        1
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 159.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 159"
+    },
+    {
+      "case_id": "M002",
+      "targets": [
+        1
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 159.0
+      },
+      "property": "h",
+      "old_value": 159.0,
+      "new_value": 160.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "g=280, h=159",
+      "source_edit": "h: 159 \u2192 160"
+    },
+    {
+      "case_id": "M003",
+      "targets": [
+        1
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 160.0
+      },
+      "property": "h",
+      "old_value": 160.0,
+      "new_value": 175.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=160",
+      "source_edit": "h: 160 \u2192 175"
+    },
+    {
+      "case_id": "M004",
+      "targets": [
+        1
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 190.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 190"
+    },
+    {
+      "case_id": "M005",
+      "targets": [
+        1
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 191.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 191"
+    },
+    {
+      "case_id": "M006",
+      "targets": [
+        2
+      ],
+      "baseline": {
+        "g": 260.0
+      },
+      "property": "g",
+      "old_value": 260.0,
+      "new_value": 209.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=260",
+      "source_edit": "g: 260 \u2192 209"
+    },
+    {
+      "case_id": "M007",
+      "targets": [
+        2
+      ],
+      "baseline": {
+        "g": 209.0
+      },
+      "property": "g",
+      "old_value": 209.0,
+      "new_value": 210.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "g=209",
+      "source_edit": "g: 209 \u2192 210"
+    },
+    {
+      "case_id": "M008",
+      "targets": [
+        2
+      ],
+      "baseline": {
+        "g": 210.0
+      },
+      "property": "g",
+      "old_value": 210.0,
+      "new_value": 260.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=210",
+      "source_edit": "g: 210 \u2192 260"
+    },
+    {
+      "case_id": "M009",
+      "targets": [
+        2
+      ],
+      "baseline": {
+        "g": 260.0
+      },
+      "property": "g",
+      "old_value": 260.0,
+      "new_value": 310.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=260",
+      "source_edit": "g: 260 \u2192 310"
+    },
+    {
+      "case_id": "M010",
+      "targets": [
+        2
+      ],
+      "baseline": {
+        "g": 260.0
+      },
+      "property": "g",
+      "old_value": 260.0,
+      "new_value": 311.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=260",
+      "source_edit": "g: 260 \u2192 311"
+    },
+    {
+      "case_id": "M011",
+      "targets": [
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 101.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 101"
+    },
+    {
+      "case_id": "M012",
+      "targets": [
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 101.0
+      },
+      "property": "h",
+      "old_value": 101.0,
+      "new_value": 103.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "g=280, h=101",
+      "source_edit": "h: 101 \u2192 103"
+    },
+    {
+      "case_id": "M013",
+      "targets": [
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 103.0
+      },
+      "property": "h",
+      "old_value": 103.0,
+      "new_value": 175.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=103",
+      "source_edit": "h: 103 \u2192 175"
+    },
+    {
+      "case_id": "M014",
+      "targets": [
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 280.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 280"
+    },
+    {
+      "case_id": "M015",
+      "targets": [
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 281.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 281"
+    },
+    {
+      "case_id": "M016",
+      "targets": [
+        4
+      ],
+      "baseline": {
+        "r": 15.0
+      },
+      "property": "r",
+      "old_value": 15.0,
+      "new_value": 9.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "r=15",
+      "source_edit": "r: 15 \u2192 9"
+    },
+    {
+      "case_id": "M017",
+      "targets": [
+        4
+      ],
+      "baseline": {
+        "r": 9.0
+      },
+      "property": "r",
+      "old_value": 9.0,
+      "new_value": 10.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "r=9",
+      "source_edit": "r: 9 \u2192 10"
+    },
+    {
+      "case_id": "M018",
+      "targets": [
+        4
+      ],
+      "baseline": {
+        "r": 10.0
+      },
+      "property": "r",
+      "old_value": 10.0,
+      "new_value": 15.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "r=10",
+      "source_edit": "r: 10 \u2192 15"
+    },
+    {
+      "case_id": "M019",
+      "targets": [
+        4
+      ],
+      "baseline": {
+        "r": 15.0
+      },
+      "property": "r",
+      "old_value": 15.0,
+      "new_value": 30.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "r=15",
+      "source_edit": "r: 15 \u2192 30"
+    },
+    {
+      "case_id": "M020",
+      "targets": [
+        4
+      ],
+      "baseline": {
+        "r": 15.0
+      },
+      "property": "r",
+      "old_value": 15.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "r=15",
+      "source_edit": "r: 15 \u2192 MISSING"
+    },
+    {
+      "case_id": "M021",
+      "targets": [
+        5
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 200.0
+      },
+      "property": "h",
+      "old_value": 200.0,
+      "new_value": 99.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=200",
+      "source_edit": "h: 200 \u2192 99"
+    },
+    {
+      "case_id": "M022",
+      "targets": [
+        5
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 99.0
+      },
+      "property": "h",
+      "old_value": 99.0,
+      "new_value": 100.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "g=280, h=99",
+      "source_edit": "h: 99 \u2192 100"
+    },
+    {
+      "case_id": "M023",
+      "targets": [
+        5
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 100.0
+      },
+      "property": "h",
+      "old_value": 100.0,
+      "new_value": 200.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=100",
+      "source_edit": "h: 100 \u2192 200"
+    },
+    {
+      "case_id": "M024",
+      "targets": [
+        5
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 200.0
+      },
+      "property": "h",
+      "old_value": 200.0,
+      "new_value": 260.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "g=280, h=200",
+      "source_edit": "h: 200 \u2192 260"
+    },
+    {
+      "case_id": "M025",
+      "targets": [
+        5
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 200.0
+      },
+      "property": "h",
+      "old_value": 200.0,
+      "new_value": 261.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=200",
+      "source_edit": "h: 200 \u2192 261"
+    },
+    {
+      "case_id": "M026",
+      "targets": [
+        6
+      ],
+      "baseline": {
+        "number of risers": 10.0
+      },
+      "property": "number of risers",
+      "old_value": 10.0,
+      "new_value": 2.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "n=10",
+      "source_edit": "n: 10 \u2192 2"
+    },
+    {
+      "case_id": "M027",
+      "targets": [
+        6
+      ],
+      "baseline": {
+        "number of risers": 2.0
+      },
+      "property": "number of risers",
+      "old_value": 2.0,
+      "new_value": 3.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "n=2",
+      "source_edit": "n: 2 \u2192 3"
+    },
+    {
+      "case_id": "M028",
+      "targets": [
+        6
+      ],
+      "baseline": {
+        "number of risers": 3.0
+      },
+      "property": "number of risers",
+      "old_value": 3.0,
+      "new_value": 10.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=3",
+      "source_edit": "n: 3 \u2192 10"
+    },
+    {
+      "case_id": "M029",
+      "targets": [
+        6
+      ],
+      "baseline": {
+        "number of risers": 10.0
+      },
+      "property": "number of risers",
+      "old_value": 10.0,
+      "new_value": 30.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=10",
+      "source_edit": "n: 10 \u2192 30"
+    },
+    {
+      "case_id": "M030",
+      "targets": [
+        6
+      ],
+      "baseline": {
+        "number of risers": 10.0
+      },
+      "property": "number of risers",
+      "old_value": 10.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "n=10",
+      "source_edit": "n: 10 \u2192 MISSING"
+    },
+    {
+      "case_id": "M031",
+      "targets": [
+        7
+      ],
+      "baseline": {
+        "number of risers": 12.0
+      },
+      "property": "number of risers",
+      "old_value": 12.0,
+      "new_value": 17.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "n=12",
+      "source_edit": "n: 12 \u2192 17"
+    },
+    {
+      "case_id": "M032",
+      "targets": [
+        7
+      ],
+      "baseline": {
+        "number of risers": 17.0
+      },
+      "property": "number of risers",
+      "old_value": 17.0,
+      "new_value": 16.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "n=17",
+      "source_edit": "n: 17 \u2192 16"
+    },
+    {
+      "case_id": "M033",
+      "targets": [
+        7
+      ],
+      "baseline": {
+        "number of risers": 16.0
+      },
+      "property": "number of risers",
+      "old_value": 16.0,
+      "new_value": 15.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=16",
+      "source_edit": "n: 16 \u2192 15"
+    },
+    {
+      "case_id": "M034",
+      "targets": [
+        7
+      ],
+      "baseline": {
+        "number of risers": 15.0
+      },
+      "property": "number of risers",
+      "old_value": 15.0,
+      "new_value": 12.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=15",
+      "source_edit": "n: 15 \u2192 12"
+    },
+    {
+      "case_id": "M035",
+      "targets": [
+        7
+      ],
+      "baseline": {
+        "number of risers": 12.0
+      },
+      "property": "number of risers",
+      "old_value": 12.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "n=12",
+      "source_edit": "n: 12 \u2192 MISSING"
+    },
+    {
+      "case_id": "M036",
+      "targets": [
+        8
+      ],
+      "baseline": {
+        "number of risers": 18.0
+      },
+      "property": "number of risers",
+      "old_value": 18.0,
+      "new_value": 23.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "n=18",
+      "source_edit": "n: 18 \u2192 23"
+    },
+    {
+      "case_id": "M037",
+      "targets": [
+        8
+      ],
+      "baseline": {
+        "number of risers": 23.0
+      },
+      "property": "number of risers",
+      "old_value": 23.0,
+      "new_value": 22.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "n=23",
+      "source_edit": "n: 23 \u2192 22"
+    },
+    {
+      "case_id": "M038",
+      "targets": [
+        8
+      ],
+      "baseline": {
+        "number of risers": 22.0
+      },
+      "property": "number of risers",
+      "old_value": 22.0,
+      "new_value": 21.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=22",
+      "source_edit": "n: 22 \u2192 21"
+    },
+    {
+      "case_id": "M039",
+      "targets": [
+        8
+      ],
+      "baseline": {
+        "number of risers": 21.0
+      },
+      "property": "number of risers",
+      "old_value": 21.0,
+      "new_value": 16.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "n=21",
+      "source_edit": "n: 21 \u2192 16"
+    },
+    {
+      "case_id": "M040",
+      "targets": [
+        8
+      ],
+      "baseline": {
+        "number of risers": 18.0
+      },
+      "property": "number of risers",
+      "old_value": 18.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "n=18",
+      "source_edit": "n: 18 \u2192 MISSING"
+    },
+    {
+      "case_id": "M041",
+      "targets": [
+        9
+      ],
+      "baseline": {
+        "climb height": 3500.0
+      },
+      "property": "climb height",
+      "old_value": 3500.0,
+      "new_value": 4001.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "H=3500",
+      "source_edit": "H: 3500 \u2192 4001"
+    },
+    {
+      "case_id": "M042",
+      "targets": [
+        9
+      ],
+      "baseline": {
+        "climb height": 4001.0
+      },
+      "property": "climb height",
+      "old_value": 4001.0,
+      "new_value": 4000.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "H=4001",
+      "source_edit": "H: 4001 \u2192 4000"
+    },
+    {
+      "case_id": "M043",
+      "targets": [
+        9
+      ],
+      "baseline": {
+        "climb height": 4000.0
+      },
+      "property": "climb height",
+      "old_value": 4000.0,
+      "new_value": 3999.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "H=4000",
+      "source_edit": "H: 4000 \u2192 3999"
+    },
+    {
+      "case_id": "M044",
+      "targets": [
+        9
+      ],
+      "baseline": {
+        "climb height": 3999.0
+      },
+      "property": "climb height",
+      "old_value": 3999.0,
+      "new_value": 3500.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "H=3999",
+      "source_edit": "H: 3999 \u2192 3500"
+    },
+    {
+      "case_id": "M045",
+      "targets": [
+        9
+      ],
+      "baseline": {
+        "climb height": 3500.0
+      },
+      "property": "climb height",
+      "old_value": 3500.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "H=3500",
+      "source_edit": "H: 3500 \u2192 MISSING"
+    },
+    {
+      "case_id": "M046",
+      "targets": [
+        10
+      ],
+      "baseline": {
+        "climb height": 2500.0
+      },
+      "property": "climb height",
+      "old_value": 2500.0,
+      "new_value": 3001.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "H=2500",
+      "source_edit": "H: 2500 \u2192 3001"
+    },
+    {
+      "case_id": "M047",
+      "targets": [
+        10
+      ],
+      "baseline": {
+        "climb height": 3001.0
+      },
+      "property": "climb height",
+      "old_value": 3001.0,
+      "new_value": 3000.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "H=3001",
+      "source_edit": "H: 3001 \u2192 3000"
+    },
+    {
+      "case_id": "M048",
+      "targets": [
+        10
+      ],
+      "baseline": {
+        "climb height": 3000.0
+      },
+      "property": "climb height",
+      "old_value": 3000.0,
+      "new_value": 2999.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "H=3000",
+      "source_edit": "H: 3000 \u2192 2999"
+    },
+    {
+      "case_id": "M049",
+      "targets": [
+        10
+      ],
+      "baseline": {
+        "climb height": 2999.0
+      },
+      "property": "climb height",
+      "old_value": 2999.0,
+      "new_value": 2500.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "H=2999",
+      "source_edit": "H: 2999 \u2192 2500"
+    },
+    {
+      "case_id": "M050",
+      "targets": [
+        10
+      ],
+      "baseline": {
+        "climb height": 2500.0
+      },
+      "property": "climb height",
+      "old_value": 2500.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "H=2500",
+      "source_edit": "H: 2500 \u2192 MISSING"
+    },
+    {
+      "case_id": "M051",
+      "targets": [
+        11
+      ],
+      "baseline": {
+        "height h": 1200.0
+      },
+      "property": "height h",
+      "old_value": 1200.0,
+      "new_value": 1099.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hgr=1200",
+      "source_edit": "hgr: 1200 \u2192 1099"
+    },
+    {
+      "case_id": "M052",
+      "targets": [
+        11
+      ],
+      "baseline": {
+        "height h": 1099.0
+      },
+      "property": "height h",
+      "old_value": 1099.0,
+      "new_value": 1100.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "hgr=1099",
+      "source_edit": "hgr: 1099 \u2192 1100"
+    },
+    {
+      "case_id": "M053",
+      "targets": [
+        11
+      ],
+      "baseline": {
+        "height h": 1100.0
+      },
+      "property": "height h",
+      "old_value": 1100.0,
+      "new_value": 1200.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hgr=1100",
+      "source_edit": "hgr: 1100 \u2192 1200"
+    },
+    {
+      "case_id": "M054",
+      "targets": [
+        11
+      ],
+      "baseline": {
+        "height h": 1200.0
+      },
+      "property": "height h",
+      "old_value": 1200.0,
+      "new_value": 1300.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hgr=1200",
+      "source_edit": "hgr: 1200 \u2192 1300"
+    },
+    {
+      "case_id": "M055",
+      "targets": [
+        11
+      ],
+      "baseline": {
+        "height h": 1200.0
+      },
+      "property": "height h",
+      "old_value": 1200.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "hgr=1200",
+      "source_edit": "hgr: 1200 \u2192 MISSING"
+    },
+    {
+      "case_id": "M056",
+      "targets": [
+        12
+      ],
+      "baseline": {
+        "height h": 950.0
+      },
+      "property": "height h",
+      "old_value": 950.0,
+      "new_value": 899.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hhr=950",
+      "source_edit": "hhr: 950 \u2192 899"
+    },
+    {
+      "case_id": "M057",
+      "targets": [
+        12
+      ],
+      "baseline": {
+        "height h": 899.0
+      },
+      "property": "height h",
+      "old_value": 899.0,
+      "new_value": 900.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "hhr=899",
+      "source_edit": "hhr: 899 \u2192 900"
+    },
+    {
+      "case_id": "M058",
+      "targets": [
+        12
+      ],
+      "baseline": {
+        "height h": 900.0
+      },
+      "property": "height h",
+      "old_value": 900.0,
+      "new_value": 950.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=900",
+      "source_edit": "hhr: 900 \u2192 950"
+    },
+    {
+      "case_id": "M059",
+      "targets": [
+        12
+      ],
+      "baseline": {
+        "height h": 950.0
+      },
+      "property": "height h",
+      "old_value": 950.0,
+      "new_value": 1000.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=950",
+      "source_edit": "hhr: 950 \u2192 1000"
+    },
+    {
+      "case_id": "M060",
+      "targets": [
+        12
+      ],
+      "baseline": {
+        "height h": 950.0
+      },
+      "property": "height h",
+      "old_value": 950.0,
+      "new_value": 1001.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hhr=950",
+      "source_edit": "hhr: 950 \u2192 1001"
+    },
+    {
+      "case_id": "M061",
+      "targets": [
+        13
+      ],
+      "baseline": {
+        "height h": 1150.0
+      },
+      "property": "height h",
+      "old_value": 1150.0,
+      "new_value": 1099.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hhr=1150",
+      "source_edit": "hhr: 1150 \u2192 1099"
+    },
+    {
+      "case_id": "M062",
+      "targets": [
+        13
+      ],
+      "baseline": {
+        "height h": 1099.0
+      },
+      "property": "height h",
+      "old_value": 1099.0,
+      "new_value": 1100.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "hhr=1099",
+      "source_edit": "hhr: 1099 \u2192 1100"
+    },
+    {
+      "case_id": "M063",
+      "targets": [
+        13
+      ],
+      "baseline": {
+        "height h": 1100.0
+      },
+      "property": "height h",
+      "old_value": 1100.0,
+      "new_value": 1150.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=1100",
+      "source_edit": "hhr: 1100 \u2192 1150"
+    },
+    {
+      "case_id": "M064",
+      "targets": [
+        13
+      ],
+      "baseline": {
+        "height h": 1150.0
+      },
+      "property": "height h",
+      "old_value": 1150.0,
+      "new_value": 1250.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=1150",
+      "source_edit": "hhr: 1150 \u2192 1250"
+    },
+    {
+      "case_id": "M065",
+      "targets": [
+        13
+      ],
+      "baseline": {
+        "height h": 1150.0
+      },
+      "property": "height h",
+      "old_value": 1150.0,
+      "new_value": null,
+      "expected": "PASS \u2192 INSUFF. INFO",
+      "source_baseline": "hhr=1150",
+      "source_edit": "hhr: 1150 \u2192 MISSING"
+    },
+    {
+      "case_id": "M066",
+      "targets": [
+        14
+      ],
+      "baseline": {
+        "height h": 850.0
+      },
+      "property": "height h",
+      "old_value": 850.0,
+      "new_value": 759.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hhr=850",
+      "source_edit": "hhr: 850 \u2192 759"
+    },
+    {
+      "case_id": "M067",
+      "targets": [
+        14
+      ],
+      "baseline": {
+        "height h": 759.0
+      },
+      "property": "height h",
+      "old_value": 759.0,
+      "new_value": 760.0,
+      "expected": "FAIL \u2192 PASS",
+      "source_baseline": "hhr=759",
+      "source_edit": "hhr: 759 \u2192 760"
+    },
+    {
+      "case_id": "M068",
+      "targets": [
+        14
+      ],
+      "baseline": {
+        "height h": 760.0
+      },
+      "property": "height h",
+      "old_value": 760.0,
+      "new_value": 850.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=760",
+      "source_edit": "hhr: 760 \u2192 850"
+    },
+    {
+      "case_id": "M069",
+      "targets": [
+        14
+      ],
+      "baseline": {
+        "height h": 850.0
+      },
+      "property": "height h",
+      "old_value": 850.0,
+      "new_value": 940.0,
+      "expected": "PASS \u2192 PASS",
+      "source_baseline": "hhr=850",
+      "source_edit": "hhr: 850 \u2192 940"
+    },
+    {
+      "case_id": "M070",
+      "targets": [
+        14
+      ],
+      "baseline": {
+        "height h": 850.0
+      },
+      "property": "height h",
+      "old_value": 850.0,
+      "new_value": 941.0,
+      "expected": "PASS \u2192 FAIL",
+      "source_baseline": "hhr=850",
+      "source_edit": "hhr: 850 \u2192 941"
+    },
+    {
+      "case_id": "M071",
+      "targets": [
+        1,
+        3
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "h",
+      "old_value": 175.0,
+      "new_value": 300.0,
+      "expected": "R1/R3: PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "h: 175 \u2192 300"
+    },
+    {
+      "case_id": "M072",
+      "targets": [
+        1,
+        2
+      ],
+      "baseline": {
+        "g": 280.0,
+        "h": 175.0
+      },
+      "property": "g",
+      "old_value": 280.0,
+      "new_value": 200.0,
+      "expected": "R1/R2: PASS \u2192 FAIL",
+      "source_baseline": "g=280, h=175",
+      "source_edit": "g: 280 \u2192 200"
+    }
+  ]
+}
