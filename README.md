@@ -9,8 +9,9 @@
 This repository hosts the research-team-owned source code, two synthetic IFC fixtures,
 the 72-case controlled mutation protocol, and the associated recorded experimental results.
 It does **not** contain the externally supplied IFC model used in the manuscript's
-larger-model case study. This is a prepublication candidate; do not make the repository
-public until all authors approve and the smoke test is rerun.
+larger-model case study. The complete 72-case synthetic mutation study was rerun
+successfully in the supported environment; see `docs/REPRODUCTION_VALIDATION.md`.
+Public release and DOI registration remain separate publication steps.
 
 ## Repository layout
 
@@ -44,7 +45,8 @@ change-aware-bim-compliance/
 └── docs/
     ├── DATA_AVAILABILITY_TEMPLATE.md
     ├── DATA_DICTIONARY.md
-    └── RELEASE_NOTES.md
+    ├── RELEASE_NOTES.md
+    └── REPRODUCTION_VALIDATION.md
 ```
 
 ## Requirements
@@ -122,9 +124,10 @@ recorded results and documentation: **CC BY 4.0**. See `LICENSES.md`.
 Use `CITATION.cff` for repository citation metadata. A Zenodo DOI should be added **only
 when the tagged release has actually been archived**. Do not cite an unassigned DOI.
 
-## Before public release
+## Publication status
 
-- [ ] Coauthors approve the exact archive and licensing notices.
-- [ ] A researcher reruns the regression and smoke tests in a fresh supported environment.
-- [ ] Confirm no confidential model data, paths, metadata, or credentials are committed.
-- [ ] Obtain a Zenodo archival DOI and update the manuscript Data Availability Statement.
+- The research team approved MIT for code and CC BY 4.0 for the synthetic dataset.
+- The regression and 72-case study were rerun in Python 3.11.1 (see validation report).
+- The externally supplied model is excluded from this repository.
+- A versioned Zenodo DOI has **not** yet been assigned; do not cite a placeholder DOI.
+- Before public release, reconfirm coauthor approval of the exact published files and check for confidential material.
