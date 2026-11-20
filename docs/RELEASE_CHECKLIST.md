@@ -13,7 +13,9 @@
 - [ ] Approve the copyright holders and public release.
 - [x] Upload contents to the **private** GitHub repository, without nesting the ZIP filename as a folder.
 - [x] Verify the GitHub file tree against `README.md` and manifest.
-- [ ] Make the repository public only after final approval and checks.
-- [ ] Tag a release `v1.0.0`, enable Zenodo GitHub archiving, confirm an actual DOI.
-- [ ] Update the manuscript Data Availability Statement with the real DOI.
+- [x] Make the repository public only after final approval and checks.
+- [x] Enable Zenodo GitHub archiving and provide the published v1.0.0 record URL: https://zenodo.org/records/24406900.
+- [ ] Independently verify the version DOI, authors, and mixed licensing on the Zenodo record.
+- [x] Update the manuscript Data Availability Statement with the Zenodo record URL.
+- [ ] Replace the record URL with the confirmed version DOI if required by the journal.
 - [ ] Ensure names, the paper title, and the DOI are consistent in GitHub/Zenodo/manuscript.
