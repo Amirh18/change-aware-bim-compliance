@@ -25,3 +25,4 @@ large_model*.json
 STAIR*.ifc
 *.bak
 smoke.csv
+reproduced_72.csv
