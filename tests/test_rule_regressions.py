@@ -6,8 +6,12 @@ import importlib.util
 import sys
 SOURCE_ROOT = Path(__file__).resolve().parent.parent / 'src'
 sys.path.insert(0, str(SOURCE_ROOT))
-from rdf_mapper import extract_railing_classification
+from rdflib import Literal, Namespace
+from rdflib.namespace import RDF, XSD
+from rdf_mapper import extract_railing_classification, populate_rdf_graph
+from ifc_extractor import find_landing_handrail_height
 
+STAIR = Namespace("http://example.com/stairOntology#")
 ROOT = SOURCE_ROOT
 s = (ROOT / 'ifc_extractor.py').read_text(encoding='utf-8')
 assert 'climb_h:.12g' in s, 'Precision fix missing from procedural extractor'
@@ -29,3 +33,34 @@ for kind, expected in [('guardrail', [11,13]),('handrail', [12,14])]:
     print(f'PASS: {kind} change only affects its own rule class')
 print('PASS: high precision threshold handling')
 print('PASS: Phase 5 regression checks completed')
+
+# Rule 13 data-model regression: the landing datum must remain distinct from
+# the generic IFC railing Height and from the stair handrail height.
+landing_component = {
+    "type": "IfcRailing",
+    "entity_id": 24,
+    "name": "Test Landing Handrail",
+    "metadata": "Class=landing_handrail",
+    "height h": 900.0,
+    "landing handrail height": 1099.0,
+}
+assert extract_railing_classification(landing_component) == "landing_handrail"
+landing_graph = populate_rdf_graph({("IfcRailing", 24): landing_component})
+landing_uri = STAIR.LandingHandrail_24
+assert (landing_uri, RDF.type, STAIR.LandingHandrail) in landing_graph
+assert (landing_uri, RDF.type, STAIR.Handrail) in landing_graph
+assert (landing_uri, STAIR.hasLandingHandrailHeight,
+        Literal(1099.0, datatype=XSD.float)) in landing_graph
+assert (landing_uri, STAIR.hasRailingHeight,
+        Literal(900.0, datatype=XSD.float)) in landing_graph
+assert not list(landing_graph.objects(landing_uri, STAIR.hasGuardrailHeight))
+assert not list(landing_graph.objects(landing_uri, STAIR.hasHandrailHeight))
+
+landing_psets = {
+    "Pset_ComplianceLandingHandrail": {
+        "HeightAboveLandingWalkingLevel": 1099.0
+    }
+}
+assert find_landing_handrail_height(landing_psets)[0] == 1099.0
+assert find_landing_handrail_height({"Pset_RailingCommon": {"Height": 1100.0}})[0] is None
+print("PASS: landing handrail class and height datum remain distinct")
