@@ -93,6 +93,19 @@ def find_int(psets, candidate_keys):
     except Exception:
         return None, None, None
 
+def find_landing_handrail_height(psets):
+    """
+    Read an explicitly named landing handrail height datum.
+
+    Accepted project-property aliases are deliberately specific. A generic
+    Pset_RailingCommon.Height is not sufficient because it does not identify
+    the landing walking surface as the measurement reference.
+    """
+    return find_numeric(psets, [
+        "HeightAboveLandingWalkingLevel",
+        "LandingHandrailHeight",
+    ])
+
 def fmt_bool(x):
     if x is True:
         return "PASS"
@@ -396,6 +409,7 @@ def main(ifc_path):
         obj_type = getattr(r, "ObjectType", None)
         psets = get_psets_and_qtos(r)
         h_rail, hs, hk = find_numeric(psets, ["Height"])
+        landing_h, lhs, lhk = find_landing_handrail_height(psets)
         kind = classify_railing(rname, obj_type, h_rail)
 
         check26 = None
@@ -416,6 +430,9 @@ def main(ifc_path):
             print(f"  height h         = {h_rail:.12g} mm   (from {src})")
         else:
             print("  height h         = N/A")
+        if landing_h is not None:
+            landing_src = f"{lhs}.{lhk}" if lhs and lhk else "unknown"
+            print(f"  landing handrail height = {landing_h:.12g} mm   (from {landing_src})")
         print("  ----------------------------------------------------------")
         print(f"  Check (11) [ID 26] guardrail h >= 1100   : {fmt_bool(check26)}")
         print(f"  Check (12) [ID 36] handrail 900..1000    : {fmt_bool(check36)}")
