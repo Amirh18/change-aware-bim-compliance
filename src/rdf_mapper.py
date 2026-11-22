@@ -79,13 +79,10 @@ def extract_railing_classification(comp_data):
     metadata = str(comp_data.get("metadata", "") or "").lower()
     name = str(comp_data.get("name", "") or "").lower()
 
-    # A dedicated landing datum takes precedence over a legacy generic railing
-    # height or a coarse class label from the IFC export.
-    if comp_data.get("landing handrail height") is not None:
-        return "landing_handrail"
-    if "class=landing_handrail" in metadata or "class=landing handrail" in metadata:
-        return "landing_handrail"
-    if "landing handrail" in name or "landing handrail" in metadata:
+    # A dedicated landing datum or explicit landing-hand­rail label takes
+    # precedence over generic railing labels and generic IFC Height.
+    normalized_label = (metadata + " " + name).replace("_", "").replace("-", "").replace(" ", "")
+    if comp_data.get("landing handrail height") is not None or "landinghandrail" in normalized_label:
         return "landing_handrail"
     if "class=guardrail" in metadata or "guard" in name:
         return "guardrail"
@@ -145,11 +142,6 @@ def populate_rdf_graph(component_data, ontology_relations=None, ontology_ttl_pat
         else:
             class_uri = CLASS_MAP.get(comp_type, STAIR.Thing)
         g.add((uri, RDF.type, class_uri))
-        # A landing handrail is also a handrail. Assert both types explicitly
-        # because this graph is queried without requiring OWL subclass inference.
-        if comp_type == "IfcRailing" and railing_class == "landing_handrail":
-            g.add((uri, RDF.type, STAIR.Handrail))
-
         # Add name and metadata as annotations (optional)
         name = data.get("name")
         if name and name != "-":
