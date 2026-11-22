@@ -55,6 +55,11 @@ def classify_rule_contexts(graph, number, target_class):
     nodes = set(graph.subjects(RDF.type, STAIR[target_class]))
     eligible, missing, not_applicable, unknown_context = set(), set(), set(), set()
     for node in nodes:
+        # RDFS inference may expose LandingHandrail as a Handrail subclass.
+        # It is not a target for stair handrail rules 12 and 14.
+        if number in (12, 14) and (node, RDF.type, STAIR.LandingHandrail) in graph:
+            not_applicable.add(node)
+            continue
         if number in (9, 10):
             parents = {p for p in graph.objects(node, STAIR.isPartOf)
                        if (p, RDF.type, STAIR.Stair) in graph}
