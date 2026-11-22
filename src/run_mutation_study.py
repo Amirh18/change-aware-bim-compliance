@@ -128,6 +128,72 @@ def new_guid():
     return ifcopenshell.guid.new()
 
 
+def set_landing_handrail_measure(model, element, value):
+    """Set/remove the explicit landing-walking-level height datum in IFC."""
+    pset_name = 'Pset_ComplianceLandingHandrail'
+    property_name = 'HeightAboveLandingWalkingLevel'
+    relationships = [
+        rel for rel in (getattr(element, 'IsDefinedBy', ()) or ())
+        if rel.is_a('IfcRelDefinesByProperties')
+        and rel.RelatingPropertyDefinition is not None
+        and rel.RelatingPropertyDefinition.is_a('IfcPropertySet')
+        and rel.RelatingPropertyDefinition.Name == pset_name
+    ]
+
+    if value is None:
+        for rel in relationships:
+            pset = rel.RelatingPropertyDefinition
+            remaining = tuple(
+                prop for prop in (pset.HasProperties or ())
+                if prop.Name != property_name
+            )
+            if remaining:
+                pset.HasProperties = remaining
+            else:
+                model.remove(rel)
+                model.remove(pset)
+        return
+
+    nominal_value = model.create_entity('IfcLengthMeasure', float(value))
+    if relationships:
+        pset = relationships[0].RelatingPropertyDefinition
+        properties = list(pset.HasProperties or ())
+        matches = [prop for prop in properties if prop.Name == property_name]
+        if matches:
+            for prop in matches:
+                prop.NominalValue = nominal_value
+        else:
+            prop = model.create_entity(
+                'IfcPropertySingleValue',
+                Name=property_name,
+                Description=None,
+                NominalValue=nominal_value,
+                Unit=None,
+            )
+            pset.HasProperties = tuple(properties + [prop])
+        return
+
+    prop = model.create_entity(
+        'IfcPropertySingleValue',
+        Name=property_name,
+        Description=None,
+        NominalValue=nominal_value,
+        Unit=None,
+    )
+    pset = model.create_entity(
+        'IfcPropertySet',
+        GlobalId=new_guid(),
+        Name=pset_name,
+        HasProperties=[prop],
+    )
+    model.create_entity(
+        'IfcRelDefinesByProperties',
+        GlobalId=new_guid(),
+        RelatedObjects=[element],
+        RelatingPropertyDefinition=pset,
+    )
+
+
 def ensure_second_flight(model):
     """Add one fully specified sibling for multi-flight rule 10 tests."""
     stair = get_first(model, 'IfcStair')
@@ -174,18 +240,29 @@ def make_state(case, is_after, filepath):
     if target == 10:
         ensure_second_flight(model)
     element = get_first(model, 'IfcRailing' if target in (11, 12, 13, 14) else 'IfcStairFlight')
-    if target in (12, 14):
+    if target == 13:
+        element.Name = 'Test Landing Handrail'
+        element.ObjectType = 'LANDING_HANDRAIL'
+    elif target in (12, 14):
         element.Name = 'Test Handrail'
         element.ObjectType = 'HANDRAIL'
-    elif target in (11, 13):
+    elif target == 11:
         element.Name = 'Test Guardrail'
         element.ObjectType = 'GUARD'
+
     for key, value in baseline.items():
-        if key not in MEASURE_NAMES:
-            raise RuntimeError(f'Unsupported baseline property {key!r}')
-        set_element_measure(model, element, MEASURE_NAMES[key], value)
+        if target == 13 and key == 'landing handrail height':
+            set_landing_handrail_measure(model, element, value)
+        else:
+            if key not in MEASURE_NAMES:
+                raise RuntimeError(f'Unsupported baseline property {key!r}')
+            set_element_measure(model, element, MEASURE_NAMES[key], value)
+
     if is_after:
-        set_element_measure(model, element, MEASURE_NAMES[prop], new_value)
+        if target == 13 and prop == 'landing handrail height':
+            set_landing_handrail_measure(model, element, new_value)
+        else:
+            set_element_measure(model, element, MEASURE_NAMES[prop], new_value)
     model.write(str(filepath))
     return {'target_rule':target,'property':prop,'baseline':baseline,'new_value':new_value,'notes':notes}
 
@@ -235,7 +312,8 @@ def timed_rules(graph, rules, rids, repetitions):
 
 def class_scoped_ids(rule_target):
     if rule_target in range(1,11): return list(range(1,11))
-    if rule_target in (11,13): return [11,13]
+    if rule_target == 11: return [11]
+    if rule_target == 13: return [13]
     if rule_target in (12,14): return [12,14]
     raise RuntimeError('Unsupported target rule')
 
