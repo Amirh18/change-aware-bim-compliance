@@ -72,6 +72,16 @@ python -m pip install -r requirements.txt
 python tests/test_rule_regressions.py
 ```
 
+### Run the IFC-level Rule 13 regression test
+
+```powershell
+python tests/test_rule13_ifc_mutations.py
+```
+
+This verifies that M061–M065 create, mutate, and remove the dedicated
+`Pset_ComplianceLandingHandrail.HeightAboveLandingWalkingLevel` property,
+and that the extracted RDF graph evaluates Rule 13 using that datum.
+
 ### Reproduce the synthetic mutation study
 
 First run a small smoke test:
