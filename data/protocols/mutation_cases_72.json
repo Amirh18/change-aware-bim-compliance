@@ -7,15 +7,15 @@
         1
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 159.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 175,
+      "new_value": 159,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 159"
+      "source_edit": "h: 175 → 159"
     },
     {
       "case_id": "M002",
@@ -23,15 +23,15 @@
         1
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 159.0
+        "g": 280,
+        "h": 159
       },
       "property": "h",
-      "old_value": 159.0,
-      "new_value": 160.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 159,
+      "new_value": 160,
+      "expected": "FAIL → PASS",
       "source_baseline": "g=280, h=159",
-      "source_edit": "h: 159 \u2192 160"
+      "source_edit": "h: 159 → 160"
     },
     {
       "case_id": "M003",
@@ -39,15 +39,15 @@
         1
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 160.0
+        "g": 280,
+        "h": 160
       },
       "property": "h",
-      "old_value": 160.0,
-      "new_value": 175.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 160,
+      "new_value": 175,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=160",
-      "source_edit": "h: 160 \u2192 175"
+      "source_edit": "h: 160 → 175"
     },
     {
       "case_id": "M004",
@@ -55,15 +55,15 @@
         1
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 190.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 175,
+      "new_value": 190,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 190"
+      "source_edit": "h: 175 → 190"
     },
     {
       "case_id": "M005",
@@ -71,15 +71,15 @@
         1
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 191.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 175,
+      "new_value": 191,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 191"
+      "source_edit": "h: 175 → 191"
     },
     {
       "case_id": "M006",
@@ -87,14 +87,14 @@
         2
       ],
       "baseline": {
-        "g": 260.0
+        "g": 260
       },
       "property": "g",
-      "old_value": 260.0,
-      "new_value": 209.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 260,
+      "new_value": 209,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=260",
-      "source_edit": "g: 260 \u2192 209"
+      "source_edit": "g: 260 → 209"
     },
     {
       "case_id": "M007",
@@ -102,14 +102,14 @@
         2
       ],
       "baseline": {
-        "g": 209.0
+        "g": 209
       },
       "property": "g",
-      "old_value": 209.0,
-      "new_value": 210.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 209,
+      "new_value": 210,
+      "expected": "FAIL → PASS",
       "source_baseline": "g=209",
-      "source_edit": "g: 209 \u2192 210"
+      "source_edit": "g: 209 → 210"
     },
     {
       "case_id": "M008",
@@ -117,14 +117,14 @@
         2
       ],
       "baseline": {
-        "g": 210.0
+        "g": 210
       },
       "property": "g",
-      "old_value": 210.0,
-      "new_value": 260.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 210,
+      "new_value": 260,
+      "expected": "PASS → PASS",
       "source_baseline": "g=210",
-      "source_edit": "g: 210 \u2192 260"
+      "source_edit": "g: 210 → 260"
     },
     {
       "case_id": "M009",
@@ -132,14 +132,14 @@
         2
       ],
       "baseline": {
-        "g": 260.0
+        "g": 260
       },
       "property": "g",
-      "old_value": 260.0,
-      "new_value": 310.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 260,
+      "new_value": 310,
+      "expected": "PASS → PASS",
       "source_baseline": "g=260",
-      "source_edit": "g: 260 \u2192 310"
+      "source_edit": "g: 260 → 310"
     },
     {
       "case_id": "M010",
@@ -147,14 +147,14 @@
         2
       ],
       "baseline": {
-        "g": 260.0
+        "g": 260
       },
       "property": "g",
-      "old_value": 260.0,
-      "new_value": 311.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 260,
+      "new_value": 311,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=260",
-      "source_edit": "g: 260 \u2192 311"
+      "source_edit": "g: 260 → 311"
     },
     {
       "case_id": "M011",
@@ -162,15 +162,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 101.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 175,
+      "new_value": 101,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 101"
+      "source_edit": "h: 175 → 101"
     },
     {
       "case_id": "M012",
@@ -178,15 +178,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 101.0
+        "g": 280,
+        "h": 101
       },
       "property": "h",
-      "old_value": 101.0,
-      "new_value": 103.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 101,
+      "new_value": 103,
+      "expected": "FAIL → PASS",
       "source_baseline": "g=280, h=101",
-      "source_edit": "h: 101 \u2192 103"
+      "source_edit": "h: 101 → 103"
     },
     {
       "case_id": "M013",
@@ -194,15 +194,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 103.0
+        "g": 280,
+        "h": 103
       },
       "property": "h",
-      "old_value": 103.0,
-      "new_value": 175.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 103,
+      "new_value": 175,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=103",
-      "source_edit": "h: 103 \u2192 175"
+      "source_edit": "h: 103 → 175"
     },
     {
       "case_id": "M014",
@@ -210,15 +210,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 280.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 175,
+      "new_value": 280,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 280"
+      "source_edit": "h: 175 → 280"
     },
     {
       "case_id": "M015",
@@ -226,15 +226,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 281.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 175,
+      "new_value": 281,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 281"
+      "source_edit": "h: 175 → 281"
     },
     {
       "case_id": "M016",
@@ -242,14 +242,14 @@
         4
       ],
       "baseline": {
-        "r": 15.0
+        "r": 15
       },
       "property": "r",
-      "old_value": 15.0,
-      "new_value": 9.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 15,
+      "new_value": 9,
+      "expected": "PASS → FAIL",
       "source_baseline": "r=15",
-      "source_edit": "r: 15 \u2192 9"
+      "source_edit": "r: 15 → 9"
     },
     {
       "case_id": "M017",
@@ -257,14 +257,14 @@
         4
       ],
       "baseline": {
-        "r": 9.0
+        "r": 9
       },
       "property": "r",
-      "old_value": 9.0,
-      "new_value": 10.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 9,
+      "new_value": 10,
+      "expected": "FAIL → PASS",
       "source_baseline": "r=9",
-      "source_edit": "r: 9 \u2192 10"
+      "source_edit": "r: 9 → 10"
     },
     {
       "case_id": "M018",
@@ -272,14 +272,14 @@
         4
       ],
       "baseline": {
-        "r": 10.0
+        "r": 10
       },
       "property": "r",
-      "old_value": 10.0,
-      "new_value": 15.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 10,
+      "new_value": 15,
+      "expected": "PASS → PASS",
       "source_baseline": "r=10",
-      "source_edit": "r: 10 \u2192 15"
+      "source_edit": "r: 10 → 15"
     },
     {
       "case_id": "M019",
@@ -287,14 +287,14 @@
         4
       ],
       "baseline": {
-        "r": 15.0
+        "r": 15
       },
       "property": "r",
-      "old_value": 15.0,
-      "new_value": 30.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 15,
+      "new_value": 30,
+      "expected": "PASS → PASS",
       "source_baseline": "r=15",
-      "source_edit": "r: 15 \u2192 30"
+      "source_edit": "r: 15 → 30"
     },
     {
       "case_id": "M020",
@@ -302,14 +302,14 @@
         4
       ],
       "baseline": {
-        "r": 15.0
+        "r": 15
       },
       "property": "r",
-      "old_value": 15.0,
+      "old_value": 15,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "r=15",
-      "source_edit": "r: 15 \u2192 MISSING"
+      "source_edit": "r: 15 → MISSING"
     },
     {
       "case_id": "M021",
@@ -317,15 +317,15 @@
         5
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 200.0
+        "g": 280,
+        "h": 200
       },
       "property": "h",
-      "old_value": 200.0,
-      "new_value": 99.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 200,
+      "new_value": 99,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=200",
-      "source_edit": "h: 200 \u2192 99"
+      "source_edit": "h: 200 → 99"
     },
     {
       "case_id": "M022",
@@ -333,15 +333,15 @@
         5
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 99.0
+        "g": 280,
+        "h": 99
       },
       "property": "h",
-      "old_value": 99.0,
-      "new_value": 100.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 99,
+      "new_value": 100,
+      "expected": "FAIL → PASS",
       "source_baseline": "g=280, h=99",
-      "source_edit": "h: 99 \u2192 100"
+      "source_edit": "h: 99 → 100"
     },
     {
       "case_id": "M023",
@@ -349,15 +349,15 @@
         5
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 100.0
+        "g": 280,
+        "h": 100
       },
       "property": "h",
-      "old_value": 100.0,
-      "new_value": 200.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 100,
+      "new_value": 200,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=100",
-      "source_edit": "h: 100 \u2192 200"
+      "source_edit": "h: 100 → 200"
     },
     {
       "case_id": "M024",
@@ -365,15 +365,15 @@
         5
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 200.0
+        "g": 280,
+        "h": 200
       },
       "property": "h",
-      "old_value": 200.0,
-      "new_value": 260.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 200,
+      "new_value": 260,
+      "expected": "PASS → PASS",
       "source_baseline": "g=280, h=200",
-      "source_edit": "h: 200 \u2192 260"
+      "source_edit": "h: 200 → 260"
     },
     {
       "case_id": "M025",
@@ -381,15 +381,15 @@
         5
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 200.0
+        "g": 280,
+        "h": 200
       },
       "property": "h",
-      "old_value": 200.0,
-      "new_value": 261.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 200,
+      "new_value": 261,
+      "expected": "PASS → FAIL",
       "source_baseline": "g=280, h=200",
-      "source_edit": "h: 200 \u2192 261"
+      "source_edit": "h: 200 → 261"
     },
     {
       "case_id": "M026",
@@ -397,14 +397,14 @@
         6
       ],
       "baseline": {
-        "number of risers": 10.0
+        "number of risers": 10
       },
       "property": "number of risers",
-      "old_value": 10.0,
-      "new_value": 2.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 10,
+      "new_value": 2,
+      "expected": "PASS → FAIL",
       "source_baseline": "n=10",
-      "source_edit": "n: 10 \u2192 2"
+      "source_edit": "n: 10 → 2"
     },
     {
       "case_id": "M027",
@@ -412,14 +412,14 @@
         6
       ],
       "baseline": {
-        "number of risers": 2.0
+        "number of risers": 2
       },
       "property": "number of risers",
-      "old_value": 2.0,
-      "new_value": 3.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 2,
+      "new_value": 3,
+      "expected": "FAIL → PASS",
       "source_baseline": "n=2",
-      "source_edit": "n: 2 \u2192 3"
+      "source_edit": "n: 2 → 3"
     },
     {
       "case_id": "M028",
@@ -427,14 +427,14 @@
         6
       ],
       "baseline": {
-        "number of risers": 3.0
+        "number of risers": 3
       },
       "property": "number of risers",
-      "old_value": 3.0,
-      "new_value": 10.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 3,
+      "new_value": 10,
+      "expected": "PASS → PASS",
       "source_baseline": "n=3",
-      "source_edit": "n: 3 \u2192 10"
+      "source_edit": "n: 3 → 10"
     },
     {
       "case_id": "M029",
@@ -442,14 +442,14 @@
         6
       ],
       "baseline": {
-        "number of risers": 10.0
+        "number of risers": 10
       },
       "property": "number of risers",
-      "old_value": 10.0,
-      "new_value": 30.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 10,
+      "new_value": 30,
+      "expected": "PASS → PASS",
       "source_baseline": "n=10",
-      "source_edit": "n: 10 \u2192 30"
+      "source_edit": "n: 10 → 30"
     },
     {
       "case_id": "M030",
@@ -457,14 +457,14 @@
         6
       ],
       "baseline": {
-        "number of risers": 10.0
+        "number of risers": 10
       },
       "property": "number of risers",
-      "old_value": 10.0,
+      "old_value": 10,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "n=10",
-      "source_edit": "n: 10 \u2192 MISSING"
+      "source_edit": "n: 10 → MISSING"
     },
     {
       "case_id": "M031",
@@ -472,14 +472,14 @@
         7
       ],
       "baseline": {
-        "number of risers": 12.0
+        "number of risers": 12
       },
       "property": "number of risers",
-      "old_value": 12.0,
-      "new_value": 17.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 12,
+      "new_value": 17,
+      "expected": "PASS → FAIL",
       "source_baseline": "n=12",
-      "source_edit": "n: 12 \u2192 17"
+      "source_edit": "n: 12 → 17"
     },
     {
       "case_id": "M032",
@@ -487,14 +487,14 @@
         7
       ],
       "baseline": {
-        "number of risers": 17.0
+        "number of risers": 17
       },
       "property": "number of risers",
-      "old_value": 17.0,
-      "new_value": 16.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 17,
+      "new_value": 16,
+      "expected": "FAIL → PASS",
       "source_baseline": "n=17",
-      "source_edit": "n: 17 \u2192 16"
+      "source_edit": "n: 17 → 16"
     },
     {
       "case_id": "M033",
@@ -502,14 +502,14 @@
         7
       ],
       "baseline": {
-        "number of risers": 16.0
+        "number of risers": 16
       },
       "property": "number of risers",
-      "old_value": 16.0,
-      "new_value": 15.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 16,
+      "new_value": 15,
+      "expected": "PASS → PASS",
       "source_baseline": "n=16",
-      "source_edit": "n: 16 \u2192 15"
+      "source_edit": "n: 16 → 15"
     },
     {
       "case_id": "M034",
@@ -517,14 +517,14 @@
         7
       ],
       "baseline": {
-        "number of risers": 15.0
+        "number of risers": 15
       },
       "property": "number of risers",
-      "old_value": 15.0,
-      "new_value": 12.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 15,
+      "new_value": 12,
+      "expected": "PASS → PASS",
       "source_baseline": "n=15",
-      "source_edit": "n: 15 \u2192 12"
+      "source_edit": "n: 15 → 12"
     },
     {
       "case_id": "M035",
@@ -532,14 +532,14 @@
         7
       ],
       "baseline": {
-        "number of risers": 12.0
+        "number of risers": 12
       },
       "property": "number of risers",
-      "old_value": 12.0,
+      "old_value": 12,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "n=12",
-      "source_edit": "n: 12 \u2192 MISSING"
+      "source_edit": "n: 12 → MISSING"
     },
     {
       "case_id": "M036",
@@ -547,14 +547,14 @@
         8
       ],
       "baseline": {
-        "number of risers": 18.0
+        "number of risers": 18
       },
       "property": "number of risers",
-      "old_value": 18.0,
-      "new_value": 23.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 18,
+      "new_value": 23,
+      "expected": "PASS → FAIL",
       "source_baseline": "n=18",
-      "source_edit": "n: 18 \u2192 23"
+      "source_edit": "n: 18 → 23"
     },
     {
       "case_id": "M037",
@@ -562,14 +562,14 @@
         8
       ],
       "baseline": {
-        "number of risers": 23.0
+        "number of risers": 23
       },
       "property": "number of risers",
-      "old_value": 23.0,
-      "new_value": 22.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 23,
+      "new_value": 22,
+      "expected": "FAIL → PASS",
       "source_baseline": "n=23",
-      "source_edit": "n: 23 \u2192 22"
+      "source_edit": "n: 23 → 22"
     },
     {
       "case_id": "M038",
@@ -577,14 +577,14 @@
         8
       ],
       "baseline": {
-        "number of risers": 22.0
+        "number of risers": 22
       },
       "property": "number of risers",
-      "old_value": 22.0,
-      "new_value": 21.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 22,
+      "new_value": 21,
+      "expected": "PASS → PASS",
       "source_baseline": "n=22",
-      "source_edit": "n: 22 \u2192 21"
+      "source_edit": "n: 22 → 21"
     },
     {
       "case_id": "M039",
@@ -592,14 +592,14 @@
         8
       ],
       "baseline": {
-        "number of risers": 21.0
+        "number of risers": 21
       },
       "property": "number of risers",
-      "old_value": 21.0,
-      "new_value": 16.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 21,
+      "new_value": 16,
+      "expected": "PASS → PASS",
       "source_baseline": "n=21",
-      "source_edit": "n: 21 \u2192 16"
+      "source_edit": "n: 21 → 16"
     },
     {
       "case_id": "M040",
@@ -607,14 +607,14 @@
         8
       ],
       "baseline": {
-        "number of risers": 18.0
+        "number of risers": 18
       },
       "property": "number of risers",
-      "old_value": 18.0,
+      "old_value": 18,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "n=18",
-      "source_edit": "n: 18 \u2192 MISSING"
+      "source_edit": "n: 18 → MISSING"
     },
     {
       "case_id": "M041",
@@ -622,14 +622,14 @@
         9
       ],
       "baseline": {
-        "climb height": 3500.0
+        "climb height": 3500
       },
       "property": "climb height",
-      "old_value": 3500.0,
-      "new_value": 4001.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 3500,
+      "new_value": 4001,
+      "expected": "PASS → FAIL",
       "source_baseline": "H=3500",
-      "source_edit": "H: 3500 \u2192 4001"
+      "source_edit": "H: 3500 → 4001"
     },
     {
       "case_id": "M042",
@@ -637,14 +637,14 @@
         9
       ],
       "baseline": {
-        "climb height": 4001.0
+        "climb height": 4001
       },
       "property": "climb height",
-      "old_value": 4001.0,
-      "new_value": 4000.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 4001,
+      "new_value": 4000,
+      "expected": "FAIL → PASS",
       "source_baseline": "H=4001",
-      "source_edit": "H: 4001 \u2192 4000"
+      "source_edit": "H: 4001 → 4000"
     },
     {
       "case_id": "M043",
@@ -652,14 +652,14 @@
         9
       ],
       "baseline": {
-        "climb height": 4000.0
+        "climb height": 4000
       },
       "property": "climb height",
-      "old_value": 4000.0,
-      "new_value": 3999.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 4000,
+      "new_value": 3999,
+      "expected": "PASS → PASS",
       "source_baseline": "H=4000",
-      "source_edit": "H: 4000 \u2192 3999"
+      "source_edit": "H: 4000 → 3999"
     },
     {
       "case_id": "M044",
@@ -667,14 +667,14 @@
         9
       ],
       "baseline": {
-        "climb height": 3999.0
+        "climb height": 3999
       },
       "property": "climb height",
-      "old_value": 3999.0,
-      "new_value": 3500.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 3999,
+      "new_value": 3500,
+      "expected": "PASS → PASS",
       "source_baseline": "H=3999",
-      "source_edit": "H: 3999 \u2192 3500"
+      "source_edit": "H: 3999 → 3500"
     },
     {
       "case_id": "M045",
@@ -682,14 +682,14 @@
         9
       ],
       "baseline": {
-        "climb height": 3500.0
+        "climb height": 3500
       },
       "property": "climb height",
-      "old_value": 3500.0,
+      "old_value": 3500,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "H=3500",
-      "source_edit": "H: 3500 \u2192 MISSING"
+      "source_edit": "H: 3500 → MISSING"
     },
     {
       "case_id": "M046",
@@ -697,14 +697,14 @@
         10
       ],
       "baseline": {
-        "climb height": 2500.0
+        "climb height": 2500
       },
       "property": "climb height",
-      "old_value": 2500.0,
-      "new_value": 3001.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 2500,
+      "new_value": 3001,
+      "expected": "PASS → FAIL",
       "source_baseline": "H=2500",
-      "source_edit": "H: 2500 \u2192 3001"
+      "source_edit": "H: 2500 → 3001"
     },
     {
       "case_id": "M047",
@@ -712,14 +712,14 @@
         10
       ],
       "baseline": {
-        "climb height": 3001.0
+        "climb height": 3001
       },
       "property": "climb height",
-      "old_value": 3001.0,
-      "new_value": 3000.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 3001,
+      "new_value": 3000,
+      "expected": "FAIL → PASS",
       "source_baseline": "H=3001",
-      "source_edit": "H: 3001 \u2192 3000"
+      "source_edit": "H: 3001 → 3000"
     },
     {
       "case_id": "M048",
@@ -727,14 +727,14 @@
         10
       ],
       "baseline": {
-        "climb height": 3000.0
+        "climb height": 3000
       },
       "property": "climb height",
-      "old_value": 3000.0,
-      "new_value": 2999.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 3000,
+      "new_value": 2999,
+      "expected": "PASS → PASS",
       "source_baseline": "H=3000",
-      "source_edit": "H: 3000 \u2192 2999"
+      "source_edit": "H: 3000 → 2999"
     },
     {
       "case_id": "M049",
@@ -742,14 +742,14 @@
         10
       ],
       "baseline": {
-        "climb height": 2999.0
+        "climb height": 2999
       },
       "property": "climb height",
-      "old_value": 2999.0,
-      "new_value": 2500.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 2999,
+      "new_value": 2500,
+      "expected": "PASS → PASS",
       "source_baseline": "H=2999",
-      "source_edit": "H: 2999 \u2192 2500"
+      "source_edit": "H: 2999 → 2500"
     },
     {
       "case_id": "M050",
@@ -757,14 +757,14 @@
         10
       ],
       "baseline": {
-        "climb height": 2500.0
+        "climb height": 2500
       },
       "property": "climb height",
-      "old_value": 2500.0,
+      "old_value": 2500,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "H=2500",
-      "source_edit": "H: 2500 \u2192 MISSING"
+      "source_edit": "H: 2500 → MISSING"
     },
     {
       "case_id": "M051",
@@ -772,14 +772,14 @@
         11
       ],
       "baseline": {
-        "height h": 1200.0
+        "height h": 1200
       },
       "property": "height h",
-      "old_value": 1200.0,
-      "new_value": 1099.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 1200,
+      "new_value": 1099,
+      "expected": "PASS → FAIL",
       "source_baseline": "hgr=1200",
-      "source_edit": "hgr: 1200 \u2192 1099"
+      "source_edit": "hgr: 1200 → 1099"
     },
     {
       "case_id": "M052",
@@ -787,14 +787,14 @@
         11
       ],
       "baseline": {
-        "height h": 1099.0
+        "height h": 1099
       },
       "property": "height h",
-      "old_value": 1099.0,
-      "new_value": 1100.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 1099,
+      "new_value": 1100,
+      "expected": "FAIL → PASS",
       "source_baseline": "hgr=1099",
-      "source_edit": "hgr: 1099 \u2192 1100"
+      "source_edit": "hgr: 1099 → 1100"
     },
     {
       "case_id": "M053",
@@ -802,14 +802,14 @@
         11
       ],
       "baseline": {
-        "height h": 1100.0
+        "height h": 1100
       },
       "property": "height h",
-      "old_value": 1100.0,
-      "new_value": 1200.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 1100,
+      "new_value": 1200,
+      "expected": "PASS → PASS",
       "source_baseline": "hgr=1100",
-      "source_edit": "hgr: 1100 \u2192 1200"
+      "source_edit": "hgr: 1100 → 1200"
     },
     {
       "case_id": "M054",
@@ -817,14 +817,14 @@
         11
       ],
       "baseline": {
-        "height h": 1200.0
+        "height h": 1200
       },
       "property": "height h",
-      "old_value": 1200.0,
-      "new_value": 1300.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 1200,
+      "new_value": 1300,
+      "expected": "PASS → PASS",
       "source_baseline": "hgr=1200",
-      "source_edit": "hgr: 1200 \u2192 1300"
+      "source_edit": "hgr: 1200 → 1300"
     },
     {
       "case_id": "M055",
@@ -832,14 +832,14 @@
         11
       ],
       "baseline": {
-        "height h": 1200.0
+        "height h": 1200
       },
       "property": "height h",
-      "old_value": 1200.0,
+      "old_value": 1200,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
+      "expected": "PASS → INSUFF. INFO",
       "source_baseline": "hgr=1200",
-      "source_edit": "hgr: 1200 \u2192 MISSING"
+      "source_edit": "hgr: 1200 → MISSING"
     },
     {
       "case_id": "M056",
@@ -847,14 +847,14 @@
         12
       ],
       "baseline": {
-        "height h": 950.0
+        "height h": 950
       },
       "property": "height h",
-      "old_value": 950.0,
-      "new_value": 899.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 950,
+      "new_value": 899,
+      "expected": "PASS → FAIL",
       "source_baseline": "hhr=950",
-      "source_edit": "hhr: 950 \u2192 899"
+      "source_edit": "hhr: 950 → 899"
     },
     {
       "case_id": "M057",
@@ -862,14 +862,14 @@
         12
       ],
       "baseline": {
-        "height h": 899.0
+        "height h": 899
       },
       "property": "height h",
-      "old_value": 899.0,
-      "new_value": 900.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 899,
+      "new_value": 900,
+      "expected": "FAIL → PASS",
       "source_baseline": "hhr=899",
-      "source_edit": "hhr: 899 \u2192 900"
+      "source_edit": "hhr: 899 → 900"
     },
     {
       "case_id": "M058",
@@ -877,14 +877,14 @@
         12
       ],
       "baseline": {
-        "height h": 900.0
+        "height h": 900
       },
       "property": "height h",
-      "old_value": 900.0,
-      "new_value": 950.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 900,
+      "new_value": 950,
+      "expected": "PASS → PASS",
       "source_baseline": "hhr=900",
-      "source_edit": "hhr: 900 \u2192 950"
+      "source_edit": "hhr: 900 → 950"
     },
     {
       "case_id": "M059",
@@ -892,14 +892,14 @@
         12
       ],
       "baseline": {
-        "height h": 950.0
+        "height h": 950
       },
       "property": "height h",
-      "old_value": 950.0,
-      "new_value": 1000.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 950,
+      "new_value": 1000,
+      "expected": "PASS → PASS",
       "source_baseline": "hhr=950",
-      "source_edit": "hhr: 950 \u2192 1000"
+      "source_edit": "hhr: 950 → 1000"
     },
     {
       "case_id": "M060",
@@ -907,14 +907,14 @@
         12
       ],
       "baseline": {
-        "height h": 950.0
+        "height h": 950
       },
       "property": "height h",
-      "old_value": 950.0,
-      "new_value": 1001.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 950,
+      "new_value": 1001,
+      "expected": "PASS → FAIL",
       "source_baseline": "hhr=950",
-      "source_edit": "hhr: 950 \u2192 1001"
+      "source_edit": "hhr: 950 → 1001"
     },
     {
       "case_id": "M061",
@@ -922,14 +922,14 @@
         13
       ],
       "baseline": {
-        "height h": 1150.0
+        "landing handrail height": 1150
       },
-      "property": "height h",
-      "old_value": 1150.0,
-      "new_value": 1099.0,
-      "expected": "PASS \u2192 FAIL",
-      "source_baseline": "hhr=1150",
-      "source_edit": "hhr: 1150 \u2192 1099"
+      "property": "landing handrail height",
+      "old_value": 1150,
+      "new_value": 1099,
+      "expected": "PASS → FAIL",
+      "source_baseline": "landing handrail height=1150",
+      "source_edit": "landing handrail height: 1150 → 1099"
     },
     {
       "case_id": "M062",
@@ -937,14 +937,14 @@
         13
       ],
       "baseline": {
-        "height h": 1099.0
+        "landing handrail height": 1099
       },
-      "property": "height h",
-      "old_value": 1099.0,
-      "new_value": 1100.0,
-      "expected": "FAIL \u2192 PASS",
-      "source_baseline": "hhr=1099",
-      "source_edit": "hhr: 1099 \u2192 1100"
+      "property": "landing handrail height",
+      "old_value": 1099,
+      "new_value": 1100,
+      "expected": "FAIL → PASS",
+      "source_baseline": "landing handrail height=1099",
+      "source_edit": "landing handrail height: 1099 → 1100"
     },
     {
       "case_id": "M063",
@@ -952,14 +952,14 @@
         13
       ],
       "baseline": {
-        "height h": 1100.0
+        "landing handrail height": 1100
       },
-      "property": "height h",
-      "old_value": 1100.0,
-      "new_value": 1150.0,
-      "expected": "PASS \u2192 PASS",
-      "source_baseline": "hhr=1100",
-      "source_edit": "hhr: 1100 \u2192 1150"
+      "property": "landing handrail height",
+      "old_value": 1100,
+      "new_value": 1150,
+      "expected": "PASS → PASS",
+      "source_baseline": "landing handrail height=1100",
+      "source_edit": "landing handrail height: 1100 → 1150"
     },
     {
       "case_id": "M064",
@@ -967,14 +967,14 @@
         13
       ],
       "baseline": {
-        "height h": 1150.0
+        "landing handrail height": 1150
       },
-      "property": "height h",
-      "old_value": 1150.0,
-      "new_value": 1250.0,
-      "expected": "PASS \u2192 PASS",
-      "source_baseline": "hhr=1150",
-      "source_edit": "hhr: 1150 \u2192 1250"
+      "property": "landing handrail height",
+      "old_value": 1150,
+      "new_value": 1250,
+      "expected": "PASS → PASS",
+      "source_baseline": "landing handrail height=1150",
+      "source_edit": "landing handrail height: 1150 → 1250"
     },
     {
       "case_id": "M065",
@@ -982,14 +982,14 @@
         13
       ],
       "baseline": {
-        "height h": 1150.0
+        "landing handrail height": 1150
       },
-      "property": "height h",
-      "old_value": 1150.0,
+      "property": "landing handrail height",
+      "old_value": 1150,
       "new_value": null,
-      "expected": "PASS \u2192 INSUFF. INFO",
-      "source_baseline": "hhr=1150",
-      "source_edit": "hhr: 1150 \u2192 MISSING"
+      "expected": "PASS → INSUFF. INFO",
+      "source_baseline": "landing handrail height=1150",
+      "source_edit": "landing handrail height: 1150 → MISSING"
     },
     {
       "case_id": "M066",
@@ -997,14 +997,14 @@
         14
       ],
       "baseline": {
-        "height h": 850.0
+        "height h": 850
       },
       "property": "height h",
-      "old_value": 850.0,
-      "new_value": 759.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 850,
+      "new_value": 759,
+      "expected": "PASS → FAIL",
       "source_baseline": "hhr=850",
-      "source_edit": "hhr: 850 \u2192 759"
+      "source_edit": "hhr: 850 → 759"
     },
     {
       "case_id": "M067",
@@ -1012,14 +1012,14 @@
         14
       ],
       "baseline": {
-        "height h": 759.0
+        "height h": 759
       },
       "property": "height h",
-      "old_value": 759.0,
-      "new_value": 760.0,
-      "expected": "FAIL \u2192 PASS",
+      "old_value": 759,
+      "new_value": 760,
+      "expected": "FAIL → PASS",
       "source_baseline": "hhr=759",
-      "source_edit": "hhr: 759 \u2192 760"
+      "source_edit": "hhr: 759 → 760"
     },
     {
       "case_id": "M068",
@@ -1027,14 +1027,14 @@
         14
       ],
       "baseline": {
-        "height h": 760.0
+        "height h": 760
       },
       "property": "height h",
-      "old_value": 760.0,
-      "new_value": 850.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 760,
+      "new_value": 850,
+      "expected": "PASS → PASS",
       "source_baseline": "hhr=760",
-      "source_edit": "hhr: 760 \u2192 850"
+      "source_edit": "hhr: 760 → 850"
     },
     {
       "case_id": "M069",
@@ -1042,14 +1042,14 @@
         14
       ],
       "baseline": {
-        "height h": 850.0
+        "height h": 850
       },
       "property": "height h",
-      "old_value": 850.0,
-      "new_value": 940.0,
-      "expected": "PASS \u2192 PASS",
+      "old_value": 850,
+      "new_value": 940,
+      "expected": "PASS → PASS",
       "source_baseline": "hhr=850",
-      "source_edit": "hhr: 850 \u2192 940"
+      "source_edit": "hhr: 850 → 940"
     },
     {
       "case_id": "M070",
@@ -1057,14 +1057,14 @@
         14
       ],
       "baseline": {
-        "height h": 850.0
+        "height h": 850
       },
       "property": "height h",
-      "old_value": 850.0,
-      "new_value": 941.0,
-      "expected": "PASS \u2192 FAIL",
+      "old_value": 850,
+      "new_value": 941,
+      "expected": "PASS → FAIL",
       "source_baseline": "hhr=850",
-      "source_edit": "hhr: 850 \u2192 941"
+      "source_edit": "hhr: 850 → 941"
     },
     {
       "case_id": "M071",
@@ -1073,15 +1073,15 @@
         3
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "h",
-      "old_value": 175.0,
-      "new_value": 300.0,
-      "expected": "R1/R3: PASS \u2192 FAIL",
+      "old_value": 175,
+      "new_value": 300,
+      "expected": "R1/R3: PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "h: 175 \u2192 300"
+      "source_edit": "h: 175 → 300"
     },
     {
       "case_id": "M072",
@@ -1090,15 +1090,15 @@
         2
       ],
       "baseline": {
-        "g": 280.0,
-        "h": 175.0
+        "g": 280,
+        "h": 175
       },
       "property": "g",
-      "old_value": 280.0,
-      "new_value": 200.0,
-      "expected": "R1/R2: PASS \u2192 FAIL",
+      "old_value": 280,
+      "new_value": 200,
+      "expected": "R1/R2: PASS → FAIL",
       "source_baseline": "g=280, h=175",
-      "source_edit": "g: 280 \u2192 200"
+      "source_edit": "g: 280 → 200"
     }
   ]
 }
