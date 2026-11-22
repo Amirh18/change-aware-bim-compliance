@@ -164,15 +164,17 @@ def get_containing_storey(element, model):
         return container.id()
     return None
 
-def classify_railing(name, object_type, height_mm):
+def classify_railing(name, object_type, height_mm=None):
+    """Classify only from explicit semantic labels, never from the measured height."""
     text = f"{name or ''} {object_type or ''}".lower()
-    if "1100" in text or "guard" in text:
+    normalized = text.replace("_", "").replace("-", "").replace(" ", "")
+    if "landinghandrail" in normalized:
+        return "landing_handrail"
+    if "guardrail" in normalized or "guard" in text:
         return "guardrail"
-    if "900" in text or "handrail" in text or "pipe" in text:
+    if "handrail" in normalized:
         return "handrail"
-    if height_mm is None:
-        return "unknown"
-    return "guardrail" if height_mm >= 1050.0 else "handrail"
+    return "unknown"
 
 def safe_by_type(model, ifc_type):
     try:
@@ -410,7 +412,8 @@ def main(ifc_path):
         psets = get_psets_and_qtos(r)
         h_rail, hs, hk = find_numeric(psets, ["Height"])
         landing_h, lhs, lhk = find_landing_handrail_height(psets)
-        kind = classify_railing(rname, obj_type, h_rail)
+        kind = ("landing_handrail" if landing_h is not None
+                else classify_railing(rname, obj_type, h_rail))
 
         check26 = None
         check36 = None
@@ -419,10 +422,11 @@ def main(ifc_path):
         if h_rail is not None:
             if kind == "guardrail":
                 check26 = (h_rail >= 1100.0)
-                check60 = (h_rail >= 1100.0)
             elif kind == "handrail":
                 check36 = (900.0 <= h_rail <= 1000.0)
                 check63 = (760.0 <= h_rail <= 940.0)
+        if kind == "landing_handrail" and landing_h is not None:
+            check60 = (landing_h >= 1100.0)
 
         print(f"[R{idx}] IfcRailing #{rid}  Name={rname}  Type={obj_type}  Class={kind}")
         if h_rail is not None:
@@ -436,7 +440,7 @@ def main(ifc_path):
         print("  ----------------------------------------------------------")
         print(f"  Check (11) [ID 26] guardrail h >= 1100   : {fmt_bool(check26)}")
         print(f"  Check (12) [ID 36] handrail 900..1000    : {fmt_bool(check36)}")
-        print(f"  Check (13) [ID 60] landing guardrail 1100: {fmt_bool(check60)}")
+        print(f"  Check (13) [ID 60] landing handrail >=1100: {fmt_bool(check60)}")
         print(f"  Check (14) [ID 63] handrail 760..940      : {fmt_bool(check63)}")
         print("============================================================")
 
