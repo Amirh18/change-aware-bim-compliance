@@ -432,7 +432,8 @@ class ChangeImpactAnalyzer:
             "r": [(4, "flight")],
             "number of risers": [(6, "flight"), (7, "flight"), (8, "flight"), (9, "flight"), (10, "flight"), (16, "flight")],
             "climb height": [(9, "flight"), (10, "flight"), (17, "flight")],
-            "height h": [(11, "railing"), (12, "railing"), (13, "railing"), (14, "railing"), (16, "railing")],
+            "height h": [(11, "railing"), (12, "railing"), (14, "railing"), (16, "railing")],
+            "landing handrail height": [(13, "railing")],
             "fire_hose_height": [(16, "hose")],
             "cabinet_depth": [(17, "cabinet")],
             "outlet_height": [(18, "outlet")],
@@ -470,6 +471,7 @@ class ChangeImpactAnalyzer:
         n = params.get("number of risers")
         climb = params.get("climb height")
         rail_h = params.get("height h")
+        landing_rail_h = params.get("landing handrail height")
         total_climb = params.get("total_climb")
 
         if rule_id == 1:
@@ -504,8 +506,10 @@ class ChangeImpactAnalyzer:
             return "PASS" if climb is not None and climb <= 4000 else ("FAIL" if climb is not None else "N/A")
         if rule_id == 10:
             return "PASS" if climb is not None and climb <= 3000 else ("FAIL" if climb is not None else "N/A")
-        if rule_id == 11 or rule_id == 13:
+        if rule_id == 11:
             return "PASS" if rail_h is not None and rail_h >= 1100 else ("FAIL" if rail_h is not None else "N/A")
+        if rule_id == 13:
+            return "PASS" if landing_rail_h is not None and landing_rail_h >= 1100 else ("FAIL" if landing_rail_h is not None else "N/A")
         if rule_id == 12:
             return "PASS" if rail_h is not None and 900 <= rail_h <= 1000 else ("FAIL" if rail_h is not None else "N/A")
         if rule_id == 14:
@@ -573,10 +577,13 @@ class ChangeImpactAnalyzer:
                         "number of risers": v.get("number of risers"),
                         "climb height": v.get("climb height"),
                     })
-            # Guardrail height
+            # Only explicitly classified guardrails contribute to Rule 16.
+            from rdf_mapper import extract_railing_classification
             for k, v in self.component_data.items():
-                if k[0] == "IfcRailing" and "height h" in v:
-                    all_params["guardrail_height"] = v.get("height h")
+                if k[0] == "IfcRailing" and extract_railing_classification(v) == "guardrail":
+                    guardrail_h = v.get("guardrail height", v.get("height h"))
+                    if guardrail_h is not None:
+                        all_params["guardrail_height"] = guardrail_h
             # MEP components
             for k, v in self.component_data.items():
                 if k[0] == "IfcFireSuppressionTerminal":
@@ -664,7 +671,9 @@ class ChangeImpactAnalyzer:
                 # generic railings must not be assigned either regulation by guess.
                 from rdf_mapper import extract_railing_classification
                 railing_kind = extract_railing_classification(comp)
-                if rule_id in (11, 13, 16) and railing_kind != "guardrail":
+                if rule_id in (11, 16) and railing_kind != "guardrail":
+                    continue
+                if rule_id == 13 and railing_kind != "landing_handrail":
                     continue
                 if rule_id in (12, 14) and railing_kind != "handrail":
                     continue
@@ -1315,9 +1324,15 @@ def suggest_fix_for_rule(rule_id, params):
     elif rule_id == 10 and climb is not None and climb > 3000 and n is not None and n > 0:
         new_h = 3000 / n
         return "h", new_h, f"Decrease riser height to {new_h:.1f} mm to limit climb to 3000 mm (currently {climb:.1f})"
-    # Rule 11 & 13: guardrail height >= 1100
-    elif (rule_id == 11 or rule_id == 13) and rail_h is not None and rail_h < 1100:
+    # Rule 11: guardrail height >= 1100
+    elif rule_id == 11 and rail_h is not None and rail_h < 1100:
         return "height h", 1100.0, f"Increase guardrail height to 1100 mm (currently {rail_h:.1f})"
+    # Rule 13: landing handrail height >= 1100, measured from landing walking surface
+    elif rule_id == 13:
+        landing_h = get_val("landing handrail height", "landing_handrail_height")
+        if landing_h is not None and landing_h < 1100:
+            return ("landing handrail height", 1100.0,
+                    f"Increase landing handrail height to 1100 mm (currently {landing_h:.1f})")
     # Rule 12: handrail 900-1000
     elif rule_id == 12 and rail_h is not None:
         if rail_h < 900:
@@ -2704,7 +2719,7 @@ def evaluate_rules_via_sparql(rdf_graph):
         10: {"id": 20, "text": "multi-flight climb H <= 3000 mm (per flight in stairs with >1 flight)", "target": "StairFlight", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this stair:hasRiserHeight ?h ; stair:hasNumberOfRisers ?n ; stair:isPartOf ?stair . BIND (?h * ?n AS ?climb) ?stair stair:hasFlight ?otherFlight . FILTER (?this != ?otherFlight) FILTER (?climb > 3000) }"},
         11: {"id": 26, "text": "guardrail height >= 1100 mm", "target": "Guardrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Guardrail ; stair:hasGuardrailHeight ?h . FILTER (?h < 1100) }"},
         12: {"id": 36, "text": "handrail height 900..1000 mm", "target": "Handrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Handrail ; stair:hasHandrailHeight ?h . FILTER (?h < 900 || ?h > 1000) }"},
-        13: {"id": 60, "text": "landing guardrail height >= 1100 mm", "target": "Guardrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Guardrail ; stair:hasGuardrailHeight ?h . FILTER (?h < 1100) }"},
+        13: {"id": 60, "text": "landing handrail height >= 1100 mm", "target": "LandingHandrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:LandingHandrail ; stair:hasLandingHandrailHeight ?h . FILTER (?h < 1100) }"},
         14: {"id": 63, "text": "handrail height 760..940 mm", "target": "Handrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Handrail ; stair:hasHandrailHeight ?h . FILTER (?h < 760 || ?h > 940) }"},
         # 15: {"id": 100, "text": "total climb per storey <= 4000 mm", "target": "BuildingStorey", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?storey (SUM(?h * ?n) AS ?totalClimb) WHERE { ?flight stair:isContainedInStorey ?storey ; stair:hasRiserHeight ?h ; stair:hasNumberOfRisers ?n . } GROUP BY ?storey HAVING (?totalClimb > 4000)"},
         # 16: {"id": 101, "text": "Fire hose conflict (risers>12, hose 900-1500, guardrail present)", "target": "FireHoseValve", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?hose WHERE { ?hose a stair:FireHoseValve ; stair:hasFireHoseHeight ?hoseH . FILTER (?hoseH >= 900 && ?hoseH <= 1500) ?hose stair:isContainedInStorey ?storey . ?flight stair:isContainedInStorey ?storey ; stair:hasNumberOfRisers ?n . FILTER (?n > 12) ?guardrail stair:isContainedInStorey ?storey ; a stair:Guardrail . }"},
@@ -2752,7 +2767,7 @@ def evaluate_rules_via_shacl(rdf_graph):
         10: {"id": 20, "text": "multi-flight climb H <= 3000 mm (per flight in stairs with >1 flight)", "target": "StairFlight", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this stair:hasRiserHeight ?h ; stair:hasNumberOfRisers ?n ; stair:isPartOf ?stair . BIND (?h * ?n AS ?climb) ?stair stair:hasFlight ?otherFlight . FILTER (?this != ?otherFlight) FILTER (?climb > 3000) }"},
         11: {"id": 26, "text": "guardrail height >= 1100 mm", "target": "Guardrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Guardrail ; stair:hasGuardrailHeight ?h . FILTER (?h < 1100) }"},
         12: {"id": 36, "text": "handrail height 900..1000 mm", "target": "Handrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Handrail ; stair:hasHandrailHeight ?h . FILTER (?h < 900 || ?h > 1000) }"},
-        13: {"id": 60, "text": "landing guardrail height >= 1100 mm", "target": "Guardrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Guardrail ; stair:hasGuardrailHeight ?h . FILTER (?h < 1100) }"},
+        13: {"id": 60, "text": "landing handrail height >= 1100 mm", "target": "LandingHandrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:LandingHandrail ; stair:hasLandingHandrailHeight ?h . FILTER (?h < 1100) }"},
         14: {"id": 63, "text": "handrail height 760..940 mm", "target": "Handrail", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?this WHERE { ?this a stair:Handrail ; stair:hasHandrailHeight ?h . FILTER (?h < 760 || ?h > 940) }"},
         # 15: {"id": 100, "text": "total climb per storey <= 4000 mm", "target": "BuildingStorey", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?storey (SUM(?h * ?n) AS ?totalClimb) WHERE { ?flight stair:isContainedInStorey ?storey ; stair:hasRiserHeight ?h ; stair:hasNumberOfRisers ?n . } GROUP BY ?storey HAVING (?totalClimb > 4000)"},
         # 16: {"id": 101, "text": "Fire hose conflict (risers>12, hose 900-1500, guardrail present)", "target": "FireHoseValve", "query": "PREFIX stair: <http://example.com/stairOntology#> SELECT ?hose WHERE { ?hose a stair:FireHoseValve ; stair:hasFireHoseHeight ?hoseH . FILTER (?hoseH >= 900 && ?hoseH <= 1500) ?hose stair:isContainedInStorey ?storey . ?flight stair:isContainedInStorey ?storey ; stair:hasNumberOfRisers ?n . FILTER (?n > 12) ?guardrail stair:isContainedInStorey ?storey ; a stair:Guardrail . }"},
@@ -3487,7 +3502,7 @@ def main():
     railing_rules = [
         "Rule 11 [ID 26]: guardrail height ≥ 1100 mm",
         "Rule 12 [ID 36]: handrail height 900..1000 mm",
-        "Rule 13 [ID 60]: landing guardrail height ≥ 1100 mm",
+        "Rule 13 [ID 60]: landing handrail height ≥ 1100 mm",
         "Rule 14 [ID 63]: handrail height 760..940 mm"
     ]
     stair_frame = ttk.Frame(rules_card, style="Card.TFrame")
