@@ -36,34 +36,21 @@ def extract_railing_heights_from_ifc(ifc_path, comp_data):
                 "name": getattr(railing, "Name", "?"),
                 "metadata": f"Type={getattr(railing, 'ObjectType', '?')}",
             }
-        # Try to get height
-        height = None
-        for rel in getattr(railing, "IsDefinedBy", []):
-            if not rel.is_a("IfcRelDefinesByProperties"):
-                continue
-            pdef = rel.RelatingPropertyDefinition
-            if pdef.is_a("IfcElementQuantity"):
-                for q in getattr(pdef, "Quantities", []):
-                    if getattr(q, "Name", "") == "Height" and hasattr(q, "LengthValue"):
-                        height = float(q.LengthValue)
-                        break
-            elif pdef.is_a("IfcPropertySet"):
-                for prop in getattr(pdef, "HasProperties", []):
-                    if not prop.is_a("IfcPropertySingleValue"):
-                        continue
-                    if getattr(prop, "Name", "") == "Height":
-                        val = getattr(prop, "NominalValue", None)
-                        if val is not None:
-                            if hasattr(val, "wrappedValue"):
-                                height = float(val.wrappedValue)
-                            else:
-                                height = float(val)
-                        break
-            if height is not None:
-                break
+        # Read the legacy generic railing height and the dedicated landing
+        # datum independently. Do not derive the latter from generic Height.
+        from ifc_extractor import (
+            get_psets_and_qtos, find_numeric, find_landing_handrail_height
+        )
+        psets = get_psets_and_qtos(railing)
+        height, _, _ = find_numeric(psets, ["Height"])
+        landing_height, _, _ = find_landing_handrail_height(psets)
+
         if height is not None:
             comp_data[key]["height h"] = height
             print(f"Direct IFC added railing height={height} for {key}")
+        if landing_height is not None:
+            comp_data[key]["landing handrail height"] = landing_height
+            print(f"Direct IFC added landing handrail height={landing_height} for {key}")
 
 def extract_stair_parameters_from_ifc(ifc_path):
     import ifcopenshell
@@ -183,7 +170,7 @@ class Ontology:
 # silently drops those values and returns false INSUFFICIENT_INFORMATION.
 NUMERIC_TOKEN = r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?"
 
-PARAM_RE = re.compile(r"^\s+((?:h|g|r|number of risers|climb height|height h)(?:\s+\([^)]+\))?)\s*=\s*([\d\.]+)\s*mm")
+PARAM_RE = re.compile(r"^\s+((?:h|g|r|number of risers|climb height|height h|landing handrail height)(?:\s+\([^)]+\))?)\s*=\s*([\d\.]+)\s*mm")
 # PARENT_RE = re.compile(r"^\s+Parent stair\s*=\s*#(\d+)\s+Name=(.*?)\s+Tag=(.*?)\s+\(flights in stair:\s*(\d+)\)")
 PARENT_RE = re.compile(r"Parent stair\s*=\s*#(\d+)")
 STAIR_HEADER_RE = re.compile(r"^\[(\d+)\]\s+IfcStairFlight\s+#(\d+)\s+Name=(.*?)\s+Tag=(.*)$")
@@ -1152,6 +1139,13 @@ def extract_results(output_text):
                 match = re.search(r'\s*=\s*(' + NUMERIC_TOKEN + r')\s*mm\b', line)
                 if match:
                     component_data[key]["height h"] = float(match.group(1))
+
+            # ----- LANDING HANDRAIL HEIGHT (explicit landing datum) -----
+            elif ("landing handrail height" in line.lower() or
+                  "height above landing walking level" in line.lower()) and current_entity["component_type"] == "IfcRailing":
+                match = re.search(r'\s*=\s*(' + NUMERIC_TOKEN + r')\s*mm\b', line)
+                if match:
+                    component_data[key]["landing handrail height"] = float(match.group(1))
 
             # ----- GAS PIPE DIAMETER -----
             elif "diameter" in line.lower() and current_entity["component_type"] == "IfcFlowSegment":
