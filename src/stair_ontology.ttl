@@ -41,7 +41,12 @@
 :Handrail rdf:type owl:Class ;
     rdfs:subClassOf :Railing ;
     rdfs:label "Handrail" ;
-    rdfs:comment "Railing for grasping, typical height 900-1000mm" .
+    rdfs:comment "Railing intended for grasping; stair handrail height is measured above the stair nosings" .
+
+:LandingHandrail rdf:type owl:Class ;
+    rdfs:subClassOf :Handrail ;
+    rdfs:label "Landing Handrail" ;
+    rdfs:comment "Handrail segment at a landing; its height is measured vertically from the landing walking surface to the top of the handrail" .
 
 :FireSuppressionTerminal rdf:type owl:Class ;
     rdfs:label "Fire Suppression Terminal" ;
@@ -155,10 +160,16 @@
     rdfs:comment "Height of guardrail in mm" .
 
 :hasHandrailHeight rdf:type owl:DatatypeProperty ;
-    rdfs:label "handrail height" ;
+    rdfs:label "stair handrail height" ;
     rdfs:domain :Handrail ;
     rdfs:range xsd:float ;
-    rdfs:comment "Height of handrail in mm" .
+    rdfs:comment "Vertical height of a stair handrail above the stair nosings, in mm" .
+
+:hasLandingHandrailHeight rdf:type owl:DatatypeProperty ;
+    rdfs:label "landing handrail height" ;
+    rdfs:domain :LandingHandrail ;
+    rdfs:range xsd:float ;
+    rdfs:comment "Vertical distance from the landing walking surface to the top of the landing handrail, in mm" .
 
 :hasRailingType rdf:type owl:DatatypeProperty ;
     rdfs:label "railing type" ;
