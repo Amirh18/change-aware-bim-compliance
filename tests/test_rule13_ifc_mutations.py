@@ -97,7 +97,7 @@ def main():
                 if study.test_rule(graph0, rid, rules)["detail"]
                 != study.test_rule(graph1, rid, rules)["detail"]
             }
-            assert changed == ([13] if old_status != new_status else []), (
+            assert changed == ({13} if old_status != new_status else set()), (
                 case["case_id"], changed
             )
             print(
