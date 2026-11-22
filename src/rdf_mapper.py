@@ -33,8 +33,11 @@ DATA_PROP_MAP = {
     "r": STAIR.hasNosingLength,
     "number of risers": STAIR.hasNumberOfRisers,
     "climb height": STAIR.hasClimbHeight,
-    # Railing generic
+    # Railing generic and role-specific height datums
     "height h": STAIR.hasRailingHeight,
+    "guardrail height": STAIR.hasGuardrailHeight,
+    "stair handrail height": STAIR.hasHandrailHeight,
+    "landing handrail height": STAIR.hasLandingHandrailHeight,
     # MEP
     "diameter": STAIR.hasDiameter,
     "width": STAIR.hasWidth,
@@ -57,6 +60,8 @@ def get_individual_uri(comp_type, entity_id, railing_classification=None):
             class_name = "Guardrail"
         elif railing_classification == "handrail":
             class_name = "Handrail"
+        elif railing_classification == "landing_handrail":
+            class_name = "LandingHandrail"
         else:
             class_name = "Railing"
     else:
@@ -71,16 +76,20 @@ def extract_railing_classification(comp_data):
     Determine railing classification from component metadata.
     Returns 'guardrail', 'handrail', or None.
     """
-    metadata = comp_data.get("metadata", "")
-    if "Class=guardrail" in metadata:
+    metadata = str(comp_data.get("metadata", "") or "").lower()
+    name = str(comp_data.get("name", "") or "").lower()
+
+    # A dedicated landing datum takes precedence over a legacy generic railing
+    # height or a coarse class label from the IFC export.
+    if comp_data.get("landing handrail height") is not None:
+        return "landing_handrail"
+    if "class=landing_handrail" in metadata or "class=landing handrail" in metadata:
+        return "landing_handrail"
+    if "landing handrail" in name or "landing handrail" in metadata:
+        return "landing_handrail"
+    if "class=guardrail" in metadata or "guard" in name:
         return "guardrail"
-    if "Class=handrail" in metadata:
-        return "handrail"
-    # Also check name or object type (if present in comp_data)
-    name = comp_data.get("name", "").lower()
-    if "guard" in name:
-        return "guardrail"
-    if "hand" in name:
+    if "class=handrail" in metadata or "hand" in name:
         return "handrail"
     return None
 
@@ -129,11 +138,17 @@ def populate_rdf_graph(component_data, ontology_relations=None, ontology_ttl_pat
                 class_uri = STAIR.Guardrail
             elif railing_class == "handrail":
                 class_uri = STAIR.Handrail
+            elif railing_class == "landing_handrail":
+                class_uri = STAIR.LandingHandrail
             else:
                 class_uri = STAIR.Railing
         else:
             class_uri = CLASS_MAP.get(comp_type, STAIR.Thing)
         g.add((uri, RDF.type, class_uri))
+        # A landing handrail is also a handrail. Assert both types explicitly
+        # because this graph is queried without requiring OWL subclass inference.
+        if comp_type == "IfcRailing" and railing_class == "landing_handrail":
+            g.add((uri, RDF.type, STAIR.Handrail))
 
         # Add name and metadata as annotations (optional)
         name = data.get("name")
@@ -156,14 +171,15 @@ def populate_rdf_graph(component_data, ontology_relations=None, ontology_ttl_pat
                     lit = Literal(float(value), datatype=XSD.float)
                 g.add((uri, prop_uri, lit))
 
-        # Special handling for railing heights if subclass-specific properties exist
+        # Backward-compatible mapping for legacy IFC exports that expose only
+        # one generic "Height" value. Never reinterpret that generic value as
+        # a landing handrail height: Rule 13 requires its explicit datum.
         if comp_type == "IfcRailing" and data.get("height h") is not None:
             height_val = data["height h"]
-            if railing_class == "guardrail":
+            if railing_class == "guardrail" and data.get("guardrail height") is None:
                 g.add((uri, STAIR.hasGuardrailHeight, Literal(float(height_val), datatype=XSD.float)))
-            elif railing_class == "handrail":
+            elif railing_class == "handrail" and data.get("stair handrail height") is None:
                 g.add((uri, STAIR.hasHandrailHeight, Literal(float(height_val), datatype=XSD.float)))
-            # else generic hasRailingHeight already added via DATA_PROP_MAP
 
     # Second pass: add object properties (isPartOf) from ontology_relations
     if ontology_relations:
