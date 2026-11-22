@@ -24,7 +24,7 @@ REQUIRED = {
     10: ('hasRiserHeight', 'hasNumberOfRisers'),
     11: ('hasGuardrailHeight',),
     12: ('hasHandrailHeight',),
-    13: ('hasGuardrailHeight',),
+    13: ('hasLandingHandrailHeight',),
     14: ('hasHandrailHeight',),
 }
 
