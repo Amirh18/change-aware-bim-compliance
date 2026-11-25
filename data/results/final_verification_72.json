@@ -1,0 +1,6424 @@
+{
+  "status": "PRELIMINARY_IFC_FIXTURE_MUTATIONS_NOT_EXPERT_VALIDATED",
+  "timestamp_utc": "2026-11-24T23:55:59.225673+00:00",
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.16299-SP0",
+  "original_fixture_sha256": "737ac58bd9e1a7480c40bb160b6711981a8d3ed56b60129403b430251df4eaca",
+  "model_state": "IFCOpenShell-generated temporary copies of uploaded IFC4 fixture",
+  "unit_assumption": "Original fixture has no UnitsInContext. Generated copies explicitly declare millimetres; original files unchanged.",
+  "regulatory_applicability_expert_verified": false,
+  "timing_scope": "SPARQL rule checks on already built RDF graphs; excludes IFC parsing/graph construction/display",
+  "scope_warning": "Controlled rule-formula tests only; regulatory profiles and independent ground truth remain unverified",
+  "cases": [
+    {
+      "case_id": "M001",
+      "target_rules": [
+        1
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 159,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1
+      ],
+      "full_outward_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.16908225510269403,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.16390579706057906,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.16908225510269403
+      ],
+      "partial_timing_samples": [
+        0.16390579706057906
+      ],
+      "ratio_full_over_partial": 1.031581909456209,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M002",
+      "target_rules": [
+        1
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 159
+        },
+        "new_value": 160,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1
+      ],
+      "full_outward_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15515006892383099,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.20655542612075806,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15515006892383099
+      ],
+      "partial_timing_samples": [
+        0.20655542612075806
+      ],
+      "ratio_full_over_partial": 0.7511304439570904,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M003",
+      "target_rules": [
+        1
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 160
+        },
+        "new_value": 175,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1348883369937539,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12535888398997486,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1348883369937539
+      ],
+      "partial_timing_samples": [
+        0.12535888398997486
+      ],
+      "ratio_full_over_partial": 1.0760173726860964,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M004",
+      "target_rules": [
+        1
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 190,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13607537420466542,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12813245202414691,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13607537420466542
+      ],
+      "partial_timing_samples": [
+        0.12813245202414691
+      ],
+      "ratio_full_over_partial": 1.0619899335027292,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M005",
+      "target_rules": [
+        1
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 191,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1
+      ],
+      "full_outward_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14215543307363987,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13399460492655635,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14215543307363987
+      ],
+      "partial_timing_samples": [
+        0.13399460492655635
+      ],
+      "ratio_full_over_partial": 1.0609041546975457,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M006",
+      "target_rules": [
+        2
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 2,
+        "property": "g",
+        "baseline": {
+          "g": 260
+        },
+        "new_value": 209,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "FAIL",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        2
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        2
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.17843327694572508,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13649421208538115,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.17843327694572508
+      ],
+      "partial_timing_samples": [
+        0.13649421208538115
+      ],
+      "ratio_full_over_partial": 1.3072589248993929,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M007",
+      "target_rules": [
+        2
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 2,
+        "property": "g",
+        "baseline": {
+          "g": 209
+        },
+        "new_value": 210,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "FAIL",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        2
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        2
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1332710140850395,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12530953902751207,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1332710140850395
+      ],
+      "partial_timing_samples": [
+        0.12530953902751207
+      ],
+      "ratio_full_over_partial": 1.0635344692775501,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M008",
+      "target_rules": [
+        2
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 2,
+        "property": "g",
+        "baseline": {
+          "g": 210
+        },
+        "new_value": 260,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13646894693374634,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12561666104011238,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13646894693374634
+      ],
+      "partial_timing_samples": [
+        0.12561666104011238
+      ],
+      "ratio_full_over_partial": 1.0863920900601598,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M009",
+      "target_rules": [
+        2
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 2,
+        "property": "g",
+        "baseline": {
+          "g": 260
+        },
+        "new_value": 310,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1
+      ],
+      "full_outward_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13568140496499836,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12378182704560459,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13568140496499836
+      ],
+      "partial_timing_samples": [
+        0.12378182704560459
+      ],
+      "ratio_full_over_partial": 1.0961334810077545,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M010",
+      "target_rules": [
+        2
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 2,
+        "property": "g",
+        "baseline": {
+          "g": 260
+        },
+        "new_value": 311,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "FAIL",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        2
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        2
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14175949105992913,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12749057612381876,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14175949105992913
+      ],
+      "partial_timing_samples": [
+        0.12749057612381876
+      ],
+      "ratio_full_over_partial": 1.111921330736261,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M011",
+      "target_rules": [
+        3
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 3,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 101,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        3
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        3
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        3
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        3
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13808982307091355,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12718819198198617,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13808982307091355
+      ],
+      "partial_timing_samples": [
+        0.12718819198198617
+      ],
+      "ratio_full_over_partial": 1.0857126036548377,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M012",
+      "target_rules": [
+        3
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 3,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 101
+        },
+        "new_value": 103,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        3
+      ],
+      "full_outward_changed_rule_ids": [
+        3
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        3
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        3
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1370595048647374,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13079706695862114,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1370595048647374
+      ],
+      "partial_timing_samples": [
+        0.13079706695862114
+      ],
+      "ratio_full_over_partial": 1.047879039276144,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M013",
+      "target_rules": [
+        3
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 3,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 103
+        },
+        "new_value": 175,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1
+      ],
+      "full_outward_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13570864289067686,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12416553101502359,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13570864289067686
+      ],
+      "partial_timing_samples": [
+        0.12416553101502359
+      ],
+      "ratio_full_over_partial": 1.0929655096812383,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M014",
+      "target_rules": [
+        3
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 3,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 280,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13543626083992422,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13024282804690301,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13543626083992422
+      ],
+      "partial_timing_samples": [
+        0.13024282804690301
+      ],
+      "ratio_full_over_partial": 1.0398750001892691,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M015",
+      "target_rules": [
+        3
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 3,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 281,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13312455895356834,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1237845909781754,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13312455895356834
+      ],
+      "partial_timing_samples": [
+        0.1237845909781754
+      ],
+      "ratio_full_over_partial": 1.0754533977257288,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M016",
+      "target_rules": [
+        4
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 4,
+        "property": "r",
+        "baseline": {
+          "r": 15
+        },
+        "new_value": 9,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "FAIL",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        4
+      ],
+      "full_outward_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        4
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1345622669905424,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12717911205254495,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1345622669905424
+      ],
+      "partial_timing_samples": [
+        0.12717911205254495
+      ],
+      "ratio_full_over_partial": 1.0580532040115758,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M017",
+      "target_rules": [
+        4
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 4,
+        "property": "r",
+        "baseline": {
+          "r": 9
+        },
+        "new_value": 10,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "FAIL",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        4
+      ],
+      "full_outward_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        4
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13903013500384986,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12759321299381554,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13903013500384986
+      ],
+      "partial_timing_samples": [
+        0.12759321299381554
+      ],
+      "ratio_full_over_partial": 1.0896358179379704,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M018",
+      "target_rules": [
+        4
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 4,
+        "property": "r",
+        "baseline": {
+          "r": 10
+        },
+        "new_value": 15,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13552152807824314,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12651157705113292,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13552152807824314
+      ],
+      "partial_timing_samples": [
+        0.12651157705113292
+      ],
+      "ratio_full_over_partial": 1.0712183915268767,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M019",
+      "target_rules": [
+        4
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 4,
+        "property": "r",
+        "baseline": {
+          "r": 15
+        },
+        "new_value": 30,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1340636881068349,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1298078040126711,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1340636881068349
+      ],
+      "partial_timing_samples": [
+        0.1298078040126711
+      ],
+      "ratio_full_over_partial": 1.0327860418449752,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M020",
+      "target_rules": [
+        4
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 4,
+        "property": "r",
+        "baseline": {
+          "r": 15
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "INSUFFICIENT_INFORMATION",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        4
+      ],
+      "full_outward_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        4
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        4
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.12735714809969068,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.11632169410586357,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.12735714809969068
+      ],
+      "partial_timing_samples": [
+        0.11632169410586357
+      ],
+      "ratio_full_over_partial": 1.0948701278695598,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M021",
+      "target_rules": [
+        5
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 5,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 200
+        },
+        "new_value": 99,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        3,
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        3,
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        3,
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        3,
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13430922687985003,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1278955969028175,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13430922687985003
+      ],
+      "partial_timing_samples": [
+        0.1278955969028175
+      ],
+      "ratio_full_over_partial": 1.0501473868713869,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M022",
+      "target_rules": [
+        5
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 5,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 99
+        },
+        "new_value": 100,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13772072410210967,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13324614404700696,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13772072410210967
+      ],
+      "partial_timing_samples": [
+        0.13324614404700696
+      ],
+      "ratio_full_over_partial": 1.0335813098915954,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M023",
+      "target_rules": [
+        5
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 5,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 100
+        },
+        "new_value": 200,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        3
+      ],
+      "full_outward_changed_rule_ids": [
+        3
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        3
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        3
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13988952292129397,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12888249196112156,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13988952292129397
+      ],
+      "partial_timing_samples": [
+        0.12888249196112156
+      ],
+      "ratio_full_over_partial": 1.0854036168348822,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M024",
+      "target_rules": [
+        5
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 5,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 200
+        },
+        "new_value": 260,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1351429559290409,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12672514119185507,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1351429559290409
+      ],
+      "partial_timing_samples": [
+        0.12672514119185507
+      ],
+      "ratio_full_over_partial": 1.0664257672788204,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M025",
+      "target_rules": [
+        5
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 5,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 200
+        },
+        "new_value": 261,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13731412403285503,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13121156301349401,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13731412403285503
+      ],
+      "partial_timing_samples": [
+        0.13121156301349401
+      ],
+      "ratio_full_over_partial": 1.0465093234102654,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M026",
+      "target_rules": [
+        6
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 6,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 10
+        },
+        "new_value": 2,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "FAIL",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        6
+      ],
+      "full_outward_changed_rule_ids": [
+        6
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        6
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        6
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15766191319562495,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1384790539741516,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15766191319562495
+      ],
+      "partial_timing_samples": [
+        0.1384790539741516
+      ],
+      "ratio_full_over_partial": 1.1385253485704343,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M027",
+      "target_rules": [
+        6
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 6,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 2
+        },
+        "new_value": 3,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "FAIL",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        6
+      ],
+      "full_outward_changed_rule_ids": [
+        6
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        6
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        6
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13466569408774376,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12684277794323862,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13466569408774376
+      ],
+      "partial_timing_samples": [
+        0.12684277794323862
+      ],
+      "ratio_full_over_partial": 1.0616741155574962,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M028",
+      "target_rules": [
+        6
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 6,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 3
+        },
+        "new_value": 10,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.16556614800356328,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1313406489789486,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.16556614800356328
+      ],
+      "partial_timing_samples": [
+        0.1313406489789486
+      ],
+      "ratio_full_over_partial": 1.2605857310032051,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M029",
+      "target_rules": [
+        6
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 6,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 10
+        },
+        "new_value": 30,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "FAIL",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        7,
+        8,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        7,
+        8,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        7,
+        8,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        7,
+        8,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1352262501604855,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12552033993415534,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1352262501604855
+      ],
+      "partial_timing_samples": [
+        0.12552033993415534
+      ],
+      "ratio_full_over_partial": 1.0773253978711468,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M030",
+      "target_rules": [
+        6
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 6,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 10
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "INSUFFICIENT_INFORMATION",
+        "7": "INSUFFICIENT_INFORMATION",
+        "8": "INSUFFICIENT_INFORMATION",
+        "9": "INSUFFICIENT_INFORMATION",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.09902183013036847,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.09090087283402681,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.09902183013036847
+      ],
+      "partial_timing_samples": [
+        0.09090087283402681
+      ],
+      "ratio_full_over_partial": 1.0893386063648638,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M031",
+      "target_rules": [
+        7
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 7,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 12
+        },
+        "new_value": 17,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        7
+      ],
+      "full_outward_changed_rule_ids": [
+        7
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        7
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        7
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13770217006094754,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12765913805924356,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13770217006094754
+      ],
+      "partial_timing_samples": [
+        0.12765913805924356
+      ],
+      "ratio_full_over_partial": 1.0786706862852484,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M032",
+      "target_rules": [
+        7
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 7,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 17
+        },
+        "new_value": 16,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        7
+      ],
+      "full_outward_changed_rule_ids": [
+        7
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        7
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        7
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13414066610857844,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12242859695106745,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13414066610857844
+      ],
+      "partial_timing_samples": [
+        0.12242859695106745
+      ],
+      "ratio_full_over_partial": 1.0956644889281228,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M033",
+      "target_rules": [
+        7
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 7,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 16
+        },
+        "new_value": 15,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1367555409669876,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.127815067069605,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1367555409669876
+      ],
+      "partial_timing_samples": [
+        0.127815067069605
+      ],
+      "ratio_full_over_partial": 1.0699485131319757,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M034",
+      "target_rules": [
+        7
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 7,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 15
+        },
+        "new_value": 12,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13814508891664445,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13215306005440652,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13814508891664445
+      ],
+      "partial_timing_samples": [
+        0.13215306005440652
+      ],
+      "ratio_full_over_partial": 1.0453415824027916,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M035",
+      "target_rules": [
+        7
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 7,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 12
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "INSUFFICIENT_INFORMATION",
+        "7": "INSUFFICIENT_INFORMATION",
+        "8": "INSUFFICIENT_INFORMATION",
+        "9": "INSUFFICIENT_INFORMATION",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.09761609695851803,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.08364719897508621,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.09761609695851803
+      ],
+      "partial_timing_samples": [
+        0.08364719897508621
+      ],
+      "ratio_full_over_partial": 1.1669977973511385,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M036",
+      "target_rules": [
+        8
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 8,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 18
+        },
+        "new_value": 23,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "FAIL",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        8,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        8,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        8,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        8,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14275704394094646,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1256320560351014,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14275704394094646
+      ],
+      "partial_timing_samples": [
+        0.1256320560351014
+      ],
+      "ratio_full_over_partial": 1.1363106554672666,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M037",
+      "target_rules": [
+        8
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 8,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 23
+        },
+        "new_value": 22,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "FAIL",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        8
+      ],
+      "full_outward_changed_rule_ids": [
+        8
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        8
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        8
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.135623374953866,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12319245305843651,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.135623374953866
+      ],
+      "partial_timing_samples": [
+        0.12319245305843651
+      ],
+      "ratio_full_over_partial": 1.1009065213559215,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M038",
+      "target_rules": [
+        8
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 8,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 22
+        },
+        "new_value": 21,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1332185121718794,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12222727085463703,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1332185121718794
+      ],
+      "partial_timing_samples": [
+        0.12222727085463703
+      ],
+      "ratio_full_over_partial": 1.0899246235344164,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M039",
+      "target_rules": [
+        8
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 8,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 21
+        },
+        "new_value": 16,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        7,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        7,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        7,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        7,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13948805397376418,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12640696577727795,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13948805397376418
+      ],
+      "partial_timing_samples": [
+        0.12640696577727795
+      ],
+      "ratio_full_over_partial": 1.1034839189126207,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M040",
+      "target_rules": [
+        8
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 8,
+        "property": "number of risers",
+        "baseline": {
+          "number of risers": 18
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "INSUFFICIENT_INFORMATION",
+        "7": "INSUFFICIENT_INFORMATION",
+        "8": "INSUFFICIENT_INFORMATION",
+        "9": "INSUFFICIENT_INFORMATION",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.09409051504917443,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.08509477600455284,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.09409051504917443
+      ],
+      "partial_timing_samples": [
+        0.08509477600455284
+      ],
+      "ratio_full_over_partial": 1.1057143513033079,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M041",
+      "target_rules": [
+        9
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 9,
+        "property": "h",
+        "baseline": {
+          "h": 175.0,
+          "number of risers": 20
+        },
+        "new_value": 200.05,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13711319188587368,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12758887093514204,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13711319188587368
+      ],
+      "partial_timing_samples": [
+        0.12758887093514204
+      ],
+      "ratio_full_over_partial": 1.074648524443587,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M042",
+      "target_rules": [
+        9
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 9,
+        "property": "h",
+        "baseline": {
+          "h": 200.05,
+          "number of risers": 20
+        },
+        "new_value": 200.0,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "FAIL",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1378837579395622,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1292511960491538,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1378837579395622
+      ],
+      "partial_timing_samples": [
+        0.1292511960491538
+      ],
+      "ratio_full_over_partial": 1.0667890290711544,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M043",
+      "target_rules": [
+        9
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 9,
+        "property": "h",
+        "baseline": {
+          "h": 200.0,
+          "number of risers": 20
+        },
+        "new_value": 199.95,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13671803916804492,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12679067091085017,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13671803916804492
+      ],
+      "partial_timing_samples": [
+        0.12679067091085017
+      ],
+      "ratio_full_over_partial": 1.0782973083577652,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M044",
+      "target_rules": [
+        9
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 9,
+        "property": "h",
+        "baseline": {
+          "h": 199.95,
+          "number of risers": 20
+        },
+        "new_value": 175.0,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14060640311799943,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12434277799911797,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14060640311799943
+      ],
+      "partial_timing_samples": [
+        0.12434277799911797
+      ],
+      "ratio_full_over_partial": 1.1307967007058248,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M045",
+      "target_rules": [
+        9
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 9,
+        "property": "h",
+        "baseline": {
+          "h": 175.0,
+          "number of risers": 20
+        },
+        "new_value": null,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "INSUFFICIENT_INFORMATION",
+        "2": "PASS",
+        "3": "INSUFFICIENT_INFORMATION",
+        "4": "PASS",
+        "5": "INSUFFICIENT_INFORMATION",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "INSUFFICIENT_INFORMATION",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        3,
+        5,
+        9
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.0556718991138041,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.044586312025785446,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.0556718991138041
+      ],
+      "partial_timing_samples": [
+        0.044586312025785446
+      ],
+      "ratio_full_over_partial": 1.2486320707935559,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M046",
+      "target_rules": [
+        10
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 10,
+        "property": "h",
+        "baseline": {
+          "h": 125.0,
+          "number of risers": 20
+        },
+        "new_value": 150.05,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "FAIL",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        10
+      ],
+      "full_outward_changed_rule_ids": [
+        10
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        10
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        10
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14321101503446698,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.14177528116852045,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14321101503446698
+      ],
+      "partial_timing_samples": [
+        0.14177528116852045
+      ],
+      "ratio_full_over_partial": 1.010126827851182,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M047",
+      "target_rules": [
+        10
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 10,
+        "property": "h",
+        "baseline": {
+          "h": 150.05,
+          "number of risers": 20
+        },
+        "new_value": 150.0,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "FAIL",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        10
+      ],
+      "full_outward_changed_rule_ids": [
+        10
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        10
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        10
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14398592407815158,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.14055626885965466,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14398592407815158
+      ],
+      "partial_timing_samples": [
+        0.14055626885965466
+      ],
+      "ratio_full_over_partial": 1.024400585234099,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M048",
+      "target_rules": [
+        10
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 10,
+        "property": "h",
+        "baseline": {
+          "h": 150.0,
+          "number of risers": 20
+        },
+        "new_value": 149.95,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.154998088022694,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.14100787206552923,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.154998088022694
+      ],
+      "partial_timing_samples": [
+        0.14100787206552923
+      ],
+      "ratio_full_over_partial": 1.0992158505211909,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M049",
+      "target_rules": [
+        10
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 10,
+        "property": "h",
+        "baseline": {
+          "h": 149.95,
+          "number of risers": 20
+        },
+        "new_value": 125.0,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.17849170207045972,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1355456078890711,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.17849170207045972
+      ],
+      "partial_timing_samples": [
+        0.1355456078890711
+      ],
+      "ratio_full_over_partial": 1.3168386999048702,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M050",
+      "target_rules": [
+        10
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 10,
+        "property": "h",
+        "baseline": {
+          "h": 125.0,
+          "number of risers": 20
+        },
+        "new_value": null,
+        "notes": [
+          "Derived climb-height edit converted to h mutation with n=20"
+        ]
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "PASS",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "INSUFFICIENT_INFORMATION",
+        "4": "PASS",
+        "5": "INSUFFICIENT_INFORMATION",
+        "6": "PASS",
+        "7": "FAIL",
+        "8": "PASS",
+        "9": "NOT_APPLICABLE",
+        "10": "INSUFFICIENT_INFORMATION",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        3,
+        5,
+        10
+      ],
+      "full_outward_changed_rule_ids": [
+        3,
+        5,
+        10
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        3,
+        5,
+        10
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [
+        1
+      ],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14330733590759337,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.13355366117320955,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14330733590759337
+      ],
+      "partial_timing_samples": [
+        0.13355366117320955
+      ],
+      "ratio_full_over_partial": 1.0730318783379065,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M051",
+      "target_rules": [
+        11
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 11,
+        "property": "height h",
+        "baseline": {
+          "height h": 1200
+        },
+        "new_value": 1099,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "FAIL",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        11
+      ],
+      "full_outward_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_rule_ids": [
+        11
+      ],
+      "class_scoped_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        11
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13782849302515388,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.00892784190364182,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13782849302515388
+      ],
+      "partial_timing_samples": [
+        0.00892784190364182
+      ],
+      "ratio_full_over_partial": 15.438052612572728,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M052",
+      "target_rules": [
+        11
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 11,
+        "property": "height h",
+        "baseline": {
+          "height h": 1099
+        },
+        "new_value": 1100,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "FAIL",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        11
+      ],
+      "full_outward_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_rule_ids": [
+        11
+      ],
+      "class_scoped_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        11
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.16816167999058962,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009550770046189427,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.16816167999058962
+      ],
+      "partial_timing_samples": [
+        0.009550770046189427
+      ],
+      "ratio_full_over_partial": 17.607133160711253,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M053",
+      "target_rules": [
+        11
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 11,
+        "property": "height h",
+        "baseline": {
+          "height h": 1100
+        },
+        "new_value": 1200,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        11
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.135605612071231,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009309573099017143,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.135605612071231
+      ],
+      "partial_timing_samples": [
+        0.009309573099017143
+      ],
+      "ratio_full_over_partial": 14.566254610058065,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M054",
+      "target_rules": [
+        11
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 11,
+        "property": "height h",
+        "baseline": {
+          "height h": 1200
+        },
+        "new_value": 1300,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        11
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13277559308335185,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009055742993950844,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13277559308335185
+      ],
+      "partial_timing_samples": [
+        0.009055742993950844
+      ],
+      "ratio_full_over_partial": 14.662031947245497,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M055",
+      "target_rules": [
+        11
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 11,
+        "property": "height h",
+        "baseline": {
+          "height h": 1200
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "INSUFFICIENT_INFORMATION",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        11
+      ],
+      "full_outward_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_rule_ids": [
+        11
+      ],
+      "class_scoped_changed_rule_ids": [
+        11
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        11
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.12502886587753892,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 2.6843976229429245e-05,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.12502886587753892
+      ],
+      "partial_timing_samples": [
+        2.6843976229429245e-05
+      ],
+      "ratio_full_over_partial": 4657.613492462748,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M056",
+      "target_rules": [
+        12
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 12,
+        "property": "height h",
+        "baseline": {
+          "height h": 950
+        },
+        "new_value": 899,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "full_changed_rule_ids": [
+        12,
+        14
+      ],
+      "full_outward_changed_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        12,
+        14
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.16096129803918302,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.027534748893231153,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.16096129803918302
+      ],
+      "partial_timing_samples": [
+        0.027534748893231153
+      ],
+      "ratio_full_over_partial": 5.845751441690177,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M057",
+      "target_rules": [
+        12
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 12,
+        "property": "height h",
+        "baseline": {
+          "height h": 899
+        },
+        "new_value": 900,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "full_changed_rule_ids": [
+        12
+      ],
+      "full_outward_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        12
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15367801790125668,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.028423348907381296,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15367801790125668
+      ],
+      "partial_timing_samples": [
+        0.028423348907381296
+      ],
+      "ratio_full_over_partial": 5.406752680763379,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M058",
+      "target_rules": [
+        12
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 12,
+        "property": "height h",
+        "baseline": {
+          "height h": 900
+        },
+        "new_value": 950,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "full_changed_rule_ids": [
+        14
+      ],
+      "full_outward_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        14
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15500164101831615,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.026605489198118448,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15500164101831615
+      ],
+      "partial_timing_samples": [
+        0.026605489198118448
+      ],
+      "ratio_full_over_partial": 5.8259271184262955,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M059",
+      "target_rules": [
+        12
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 12,
+        "property": "height h",
+        "baseline": {
+          "height h": 950
+        },
+        "new_value": 1000,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15441897697746754,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.02730657998472452,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15441897697746754
+      ],
+      "partial_timing_samples": [
+        0.02730657998472452
+      ],
+      "ratio_full_over_partial": 5.655009783863469,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M060",
+      "target_rules": [
+        12
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 12,
+        "property": "height h",
+        "baseline": {
+          "height h": 950
+        },
+        "new_value": 1001,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "full_changed_rule_ids": [
+        12
+      ],
+      "full_outward_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        12
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.14928870601579547,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.025956903118640184,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.14928870601579547
+      ],
+      "partial_timing_samples": [
+        0.025956903118640184
+      ],
+      "ratio_full_over_partial": 5.751406681045405,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M061",
+      "target_rules": [
+        13
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 13,
+        "property": "landing handrail height",
+        "baseline": {
+          "landing handrail height": 1150
+        },
+        "new_value": 1099,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "FAIL",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        13
+      ],
+      "full_outward_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_rule_ids": [
+        13
+      ],
+      "class_scoped_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        13
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13920303899794817,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009998820023611188,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13920303899794817
+      ],
+      "partial_timing_samples": [
+        0.009998820023611188
+      ],
+      "ratio_full_over_partial": 13.92194665662893,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M062",
+      "target_rules": [
+        13
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 13,
+        "property": "landing handrail height",
+        "baseline": {
+          "landing handrail height": 1099
+        },
+        "new_value": 1100,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "FAIL",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        13
+      ],
+      "full_outward_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_rule_ids": [
+        13
+      ],
+      "class_scoped_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        13
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13442173297517002,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009813282871618867,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13442173297517002
+      ],
+      "partial_timing_samples": [
+        0.009813282871618867
+      ],
+      "ratio_full_over_partial": 13.697937248291598,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M063",
+      "target_rules": [
+        13
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 13,
+        "property": "landing handrail height",
+        "baseline": {
+          "landing handrail height": 1100
+        },
+        "new_value": 1150,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        13
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1341860629618168,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.009236936923116446,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1341860629618168
+      ],
+      "partial_timing_samples": [
+        0.009236936923116446
+      ],
+      "ratio_full_over_partial": 14.527116952157753,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M064",
+      "target_rules": [
+        13
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 13,
+        "property": "landing handrail height",
+        "baseline": {
+          "landing handrail height": 1150
+        },
+        "new_value": 1250,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        13
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13622893509455025,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.00900323991663754,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13622893509455025
+      ],
+      "partial_timing_samples": [
+        0.00900323991663754
+      ],
+      "ratio_full_over_partial": 15.131101287527166,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M065",
+      "target_rules": [
+        13
+      ],
+      "protocol_expectation": "PASS → INSUFF. INFO",
+      "case_parameters": {
+        "target_rule": 13,
+        "property": "landing handrail height",
+        "baseline": {
+          "landing handrail height": 1150
+        },
+        "new_value": null,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "PASS",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "NOT_APPLICABLE",
+        "13": "INSUFFICIENT_INFORMATION",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        13
+      ],
+      "full_outward_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_rule_ids": [
+        13
+      ],
+      "class_scoped_changed_rule_ids": [
+        13
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        13
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.22631344781257212,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 3.829086199402809e-05,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.22631344781257212
+      ],
+      "partial_timing_samples": [
+        3.829086199402809e-05
+      ],
+      "ratio_full_over_partial": 5910.377464154982,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M066",
+      "target_rules": [
+        14
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 14,
+        "property": "height h",
+        "baseline": {
+          "height h": 850
+        },
+        "new_value": 759,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "full_changed_rule_ids": [
+        14
+      ],
+      "full_outward_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        14
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15606945985928178,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.027358687948435545,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15606945985928178
+      ],
+      "partial_timing_samples": [
+        0.027358687948435545
+      ],
+      "ratio_full_over_partial": 5.704566686583606,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M067",
+      "target_rules": [
+        14
+      ],
+      "protocol_expectation": "FAIL → PASS",
+      "case_parameters": {
+        "target_rule": 14,
+        "property": "height h",
+        "baseline": {
+          "height h": 759
+        },
+        "new_value": 760,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "full_changed_rule_ids": [
+        14
+      ],
+      "full_outward_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        14
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        14
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15710135689005256,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.026657598093152046,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15710135689005256
+      ],
+      "partial_timing_samples": [
+        0.026657598093152046
+      ],
+      "ratio_full_over_partial": 5.893305028498034,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M068",
+      "target_rules": [
+        14
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 14,
+        "property": "height h",
+        "baseline": {
+          "height h": 760
+        },
+        "new_value": 850,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "full_changed_rule_ids": [],
+      "full_outward_changed_rule_ids": [],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15086931502446532,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.027023142902180552,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15086931502446532
+      ],
+      "partial_timing_samples": [
+        0.027023142902180552
+      ],
+      "ratio_full_over_partial": 5.582966998716177,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M069",
+      "target_rules": [
+        14
+      ],
+      "protocol_expectation": "PASS → PASS",
+      "case_parameters": {
+        "target_rule": 14,
+        "property": "height h",
+        "baseline": {
+          "height h": 850
+        },
+        "new_value": 940,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "full_changed_rule_ids": [
+        12
+      ],
+      "full_outward_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        12
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        12
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.15639947820454836,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.026981299044564366,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.15639947820454836
+      ],
+      "partial_timing_samples": [
+        0.026981299044564366
+      ],
+      "ratio_full_over_partial": 5.796588145968327,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M070",
+      "target_rules": [
+        14
+      ],
+      "protocol_expectation": "PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 14,
+        "property": "height h",
+        "baseline": {
+          "height h": 850
+        },
+        "new_value": 941,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "FAIL",
+        "13": "NOT_APPLICABLE",
+        "14": "PASS"
+      },
+      "new_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "NOT_APPLICABLE",
+        "12": "PASS",
+        "13": "NOT_APPLICABLE",
+        "14": "FAIL"
+      },
+      "full_changed_rule_ids": [
+        12,
+        14
+      ],
+      "full_outward_changed_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_changed_rule_ids": [
+        12,
+        14
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        12,
+        14
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.1460216899868101,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.026508774142712355,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.1460216899868101
+      ],
+      "partial_timing_samples": [
+        0.026508774142712355
+      ],
+      "ratio_full_over_partial": 5.508428613133495,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M071",
+      "target_rules": [
+        1,
+        3
+      ],
+      "protocol_expectation": "R1/R3: PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "h",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 300,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "PASS",
+        "3": "FAIL",
+        "4": "PASS",
+        "5": "FAIL",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        3,
+        5
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.16639198106713593,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.12928435602225363,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.16639198106713593
+      ],
+      "partial_timing_samples": [
+        0.12928435602225363
+      ],
+      "ratio_full_over_partial": 1.2870233196543517,
+      "status": "COMPLETED_DIAGNOSTIC"
+    },
+    {
+      "case_id": "M072",
+      "target_rules": [
+        1,
+        2
+      ],
+      "protocol_expectation": "R1/R2: PASS → FAIL",
+      "case_parameters": {
+        "target_rule": 1,
+        "property": "g",
+        "baseline": {
+          "g": 280,
+          "h": 175
+        },
+        "new_value": 200,
+        "notes": []
+      },
+      "protocol_target_expectations_matched": true,
+      "old_full_status": {
+        "1": "PASS",
+        "2": "PASS",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "new_full_status": {
+        "1": "FAIL",
+        "2": "FAIL",
+        "3": "PASS",
+        "4": "PASS",
+        "5": "PASS",
+        "6": "PASS",
+        "7": "PASS",
+        "8": "PASS",
+        "9": "PASS",
+        "10": "NOT_APPLICABLE",
+        "11": "PASS",
+        "12": "NOT_APPLICABLE",
+        "13": "NOT_APPLICABLE",
+        "14": "NOT_APPLICABLE"
+      },
+      "full_changed_rule_ids": [
+        1,
+        2
+      ],
+      "full_outward_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_rule_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "class_scoped_changed_rule_ids": [
+        1,
+        2
+      ],
+      "class_scoped_missed_detailed": [],
+      "class_scoped_extra_detailed": [],
+      "class_scoped_missed_outward": [],
+      "gui_analyzer_changed_rule_ids": [
+        1,
+        2
+      ],
+      "gui_analyzer_missed_outward": [],
+      "gui_analyzer_extra_outward": [],
+      "shacl_disagreement_rule_ids": [],
+      "mean_full_seconds": 0.13612116500735283,
+      "std_full_seconds": null,
+      "mean_partial_seconds": 0.1225853159558028,
+      "std_partial_seconds": null,
+      "full_timing_samples": [
+        0.13612116500735283
+      ],
+      "partial_timing_samples": [
+        0.1225853159558028
+      ],
+      "ratio_full_over_partial": 1.1104198243159098,
+      "status": "COMPLETED_DIAGNOSTIC"
+    }
+  ],
+  "summary": {
+    "n_requested": 72,
+    "n_completed": 72,
+    "n_errors": 0,
+    "total_class_scoped_missed_outward": 0,
+    "total_gui_analyzer_missed_outward": 0,
+    "total_gui_analyzer_extra_outward": 1,
+    "n_with_shacl_discrepancy": 0,
+    "target_expectation_matches": 72,
+    "n_protocol_expectation_mismatches": 0,
+    "median_full_over_class_scoped_ratio": 1.0958989849679388
+  }
+}

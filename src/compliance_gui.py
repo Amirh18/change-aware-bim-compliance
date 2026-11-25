@@ -424,13 +424,24 @@ def rdf_graph_to_ontology(g):
 # ------------------------------
 # Change Impact Analyzer (rules 1-14 + storey rule 15)
 # ------------------------------
+def mep_guardrail_height(comp_data):
+    """Return a measured guardrail height for an unambiguous illustrative context."""
+    from rdf_mapper import extract_railing_classification
+    candidates = [v for k, v in comp_data.items()
+                  if k[0] == "IfcRailing" and extract_railing_classification(v) == "guardrail"]
+    if len(candidates) != 1:
+        return None
+    value = candidates[0].get("guardrail height")
+    return value if value is not None else candidates[0].get("height h")
+
+
 class ChangeImpactAnalyzer:
     def __init__(self):
         self.dep_graph = {
-            "h": [(1, "flight"), (3, "flight"), (5, "flight"), (9, "flight"), (10, "flight"), (18, "flight")],
+            "h": [(1, "flight"), (3, "flight"), (5, "flight"), (9, "flight"), (10, "flight"), (17, "flight"), (18, "flight")],
             "g": [(1, "flight"), (2, "flight"), (3, "flight"), (5, "flight"), (17, "flight"), (18, "flight")],
             "r": [(4, "flight")],
-            "number of risers": [(6, "flight"), (7, "flight"), (8, "flight"), (9, "flight"), (10, "flight"), (16, "flight")],
+            "number of risers": [(6, "flight"), (7, "flight"), (8, "flight"), (9, "flight"), (10, "flight"), (16, "flight"), (17, "flight")],
             "climb height": [(9, "flight"), (10, "flight"), (17, "flight")],
             "height h": [(11, "railing"), (12, "railing"), (14, "railing"), (16, "railing")],
             "landing handrail height": [(13, "railing")],
@@ -532,24 +543,16 @@ class ChangeImpactAnalyzer:
             g = params.get("g")
             climb = params.get("climb height")
             depth = params.get("cabinet_depth")
-            if depth is not None:
-                condition = (g is not None and g < 1200) or (climb is not None and climb > 6000)
-                if condition and depth > 100:
-                    return "FAIL"
-                else:
-                    return "PASS"
-            return "N/A"
+            if any(v is None for v in (depth, g, climb)):
+                return "N/A"
+            return "FAIL" if depth > 100 and (g < 1200 or climb > 6000) else "PASS"
         if rule_id == 18:
             h = params.get("h")
             g = params.get("g")
             outlet_h = params.get("outlet_height")
-            if outlet_h is not None:
-                condition = (h is not None and h > 190) or (g is not None and g < 240)
-                if condition and 600 <= outlet_h <= 1200:
-                    return "FAIL"
-                else:
-                    return "PASS"
-            return "N/A"
+            if any(v is None for v in (outlet_h, h, g)):
+                return "N/A"
+            return "FAIL" if 600 <= outlet_h <= 1200 and (h > 190 or g < 240) else "PASS"
 
     def find_impact(self, comp_key, param_name, new_value):
         if comp_key not in self.component_data:
@@ -577,13 +580,7 @@ class ChangeImpactAnalyzer:
                         "number of risers": v.get("number of risers"),
                         "climb height": v.get("climb height"),
                     })
-            # Only explicitly classified guardrails contribute to Rule 16.
-            from rdf_mapper import extract_railing_classification
-            for k, v in self.component_data.items():
-                if k[0] == "IfcRailing" and extract_railing_classification(v) == "guardrail":
-                    guardrail_h = v.get("guardrail height", v.get("height h"))
-                    if guardrail_h is not None:
-                        all_params["guardrail_height"] = guardrail_h
+            all_params["guardrail_height"] = mep_guardrail_height(self.component_data)
             # MEP components
             for k, v in self.component_data.items():
                 if k[0] == "IfcFireSuppressionTerminal":
@@ -683,8 +680,9 @@ class ChangeImpactAnalyzer:
                     full_old = get_all_params()
                     full_new = get_all_params()
                     # Override guardrail height with the railing's height (old and new)
-                    full_old["guardrail_height"] = old_params.get("height h")
-                    full_new["guardrail_height"] = new_params.get("height h")
+                    full_old["guardrail_height"] = mep_guardrail_height({comp_key: old_params})
+                    full_new["guardrail_height"] = (new_value if param_name == "guardrail_height"
+                        else mep_guardrail_height({comp_key: new_params}))
                     old_status = self.evaluate_rule(rule_id, full_old)
                     new_status = self.evaluate_rule(rule_id, full_new)
                 else:
@@ -1345,21 +1343,7 @@ def suggest_fix_for_rule(rule_id, params):
             return "height h", 760.0, f"Increase handrail height to 760 mm (currently {rail_h:.1f})"
         elif rail_h > 940:
             return "height h", 940.0, f"Decrease handrail height to 940 mm (currently {rail_h:.1f})"
-    # Rule 16: fire hose conflict (risers >12)
-    elif rule_id == 16 and n is not None and n > 12:
-        return "number of risers", 12.0, f"Reduce number of risers to ≤12 (currently {n})"
-    # Rule 17: cabinet depth >100 with narrow stair or high climb
-    elif rule_id == 17 and depth is not None and depth > 100:
-        if g is not None and g < 1200:
-            return "g", 1200.0, f"Increase tread length to 1200 mm (currently {g:.1f}) to avoid cabinet conflict"
-        if climb is not None and climb > 6000:
-            return "climb height", 6000.0, f"Reduce total climb height to ≤6000 mm (currently {climb:.1f})"
-    # Rule 18: outlet in danger zone
-    elif rule_id == 18 and outlet_h is not None and 600 <= outlet_h <= 1200:
-        if h is not None and h > 190:
-            return "h", 190.0, f"Decrease riser height to ≤190 mm (currently {h:.1f})"
-        if g is not None and g < 240:
-            return "g", 240.0, f"Increase tread length to ≥240 mm (currently {g:.1f})"
+    # Rules 16–18 are illustrative only; do not recommend design changes.
     return None, None, None
 
 def get_failed_items(result_state):
@@ -1753,9 +1737,9 @@ def plot_enhanced_mep_viz(result_state, parent_window=None, status_overrides=Non
 
     fig, ax = plt.subplots(figsize=(14, 8))
     ax.set_xlim(-1.5, 5.5)
-    ax.set_ylim(-0.5, 4.5)
+    ax.set_ylim(-1.15, 4.5)
     ax.set_aspect('equal')
-    ax.set_title("Enhanced MEP Conflict Visualization (with Parameters)", fontsize=16, fontweight='bold')
+    ax.set_title("Illustrative MEP Rule Outcomes (schematic, not to scale)", fontsize=16, fontweight='bold')
     ax.axis('off')
 
     # ---- Stair flight (main rectangle) ----
@@ -1769,7 +1753,7 @@ def plot_enhanced_mep_viz(result_state, parent_window=None, status_overrides=Non
     param_text = f"h = {fmt(stair_params.get('h'))} mm\n"
     param_text += f"g = {fmt(stair_params.get('g'))} mm\n"
     param_text += f"Risers = {fmt(stair_params.get('number_of_risers'))}\n"
-    param_text += f"Climb = {fmt(stair_params.get('climb_height'))} mm"
+    param_text += f"Climb = {fmt(stair_params.get('climb_height'))} mm\n"
     param_text += f"Guardrail = {fmt(mep_params.get('guardrail_height', '?'))} mm"
     ax.text(2, 0.4, param_text, ha='center', va='bottom', fontsize=9,
             bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.3'))
@@ -1927,7 +1911,7 @@ def plot_enhanced_mep_viz_3d(result_state, parent_window=None, status_overrides=
 
     fig = plt.figure(figsize=(12, 8))
     ax = fig.add_subplot(111, projection='3d')
-    ax.set_title("Enhanced 3D MEP Conflict Visualization (with Parameters)", fontsize=16, fontweight='bold')
+    ax.set_title("Illustrative 3D MEP Rule Outcomes (schematic, not to scale)", fontsize=16, fontweight='bold')
 
     # Stair flight (translucent box, background)
     vertices = [
@@ -2401,7 +2385,7 @@ def show_simulation_dialog(parent, result_state, status_label):
     ttk.Label(val_frame, text="(For 'number of risers', value is count)", font=("Segoe UI", 8, "italic")).pack(anchor=tk.W, pady=(2,0))
 
     propagate_var = tk.BooleanVar(value=True)
-    ttk.Checkbutton(val_frame, text="Apply change to all flights in same stair (propagation)", variable=propagate_var).pack(anchor=tk.W, pady=(8,0))
+    ttk.Checkbutton(val_frame, text="Include supported structural-context checks", variable=propagate_var).pack(anchor=tk.W, pady=(8,0))
 
     btn_frame = ttk.Frame(main_frame)
     btn_frame.pack(fill=tk.X, pady=10)
@@ -2450,39 +2434,12 @@ def show_simulation_dialog(parent, result_state, status_label):
                 return
             item = items[sel[0]]
             rule_id = item["rule_id"]
-            # Determine which component to modify
-            if rule_id in [16, 17, 18]:
-                target_key = None
-                for k in comp_data:
-                    if k[0] == "IfcStairFlight":
-                        target_key = k
-                        break
-                if target_key is None:
-                    messagebox.showerror("Error", "No stair flight found to apply the fix.")
-                    return
-                comp_key = target_key
-                comp_name = comp_data[target_key].get("name", "Stair Flight")
-            else:
-                comp_key = item["comp_key"]
-                comp_name = item["component_name"]
-
-            # Collect parameters for suggestion
-            stair_params = {}
-            for k, v in comp_data.items():
-                if k[0] == "IfcStairFlight":
-                    stair_params.update({
-                        "h": v.get("h"),
-                        "g": v.get("g"),
-                        "number of risers": v.get("number of risers"),
-                        "climb height": v.get("climb height"),
-                    })
-                if k[0] == "IfcRailing" and "height h" in v:
-                    stair_params["guardrail_height"] = v.get("height h")
-            if stair_params.get("guardrail_height") is None:
-                stair_params["guardrail_height"] = 1100.0
-
-            mep_data = comp_data.get(item["comp_key"], {})
-            full_params = {**stair_params, **mep_data}
+            if rule_id in (16, 17, 18):
+                messagebox.showinfo("Illustrative MEP rule", "No automated design correction is provided for illustrative MEP checks.")
+                return
+            comp_key = item["comp_key"]
+            comp_name = item["component_name"]
+            full_params = comp_data.get(comp_key, {}).copy()
             param, new_val, expl = suggest_fix_for_rule(rule_id, full_params)
             if param is None:
                 messagebox.showinfo("No suggestion", f"No automated fix suggestion for Rule {rule_id}.")
@@ -2596,7 +2553,7 @@ def show_simulation_dialog(parent, result_state, status_label):
         # Get current stair parameters from component data
         current_stair = {}
         for k, v in comp_data.items():
-            if k[0] == "IfcStairFlight":
+            if k[0] == "IfcStairFlight" and (key[0] != "IfcStairFlight" or k == key):
                 current_stair = {
                     "h": v.get("h"),
                     "g": v.get("g"),
@@ -2604,12 +2561,8 @@ def show_simulation_dialog(parent, result_state, status_label):
                     "climb_height": v.get("climb height")
                 }
                 break
-        # Get current guardrail height from railing (default 1100 if missing)
-        guardrail_h = 1100.0
-        for k, v in comp_data.items():
-            if k[0] == "IfcRailing" and "height h" in v:
-                guardrail_h = v.get("height h")
-                break
+        # Use a measured, explicitly classified guardrail only.
+        guardrail_h = mep_guardrail_height(comp_data)
 
         # Prepare updated parameters
         updated_stair = current_stair.copy()
@@ -2621,15 +2574,17 @@ def show_simulation_dialog(parent, result_state, status_label):
         }
         # Apply the change based on component type
         if key[0] == "IfcStairFlight":
-            updated_stair[param] = new_val
-            if param == "h" and updated_stair.get("number_of_risers"):
-                updated_stair["climb_height"] = updated_stair["h"] * updated_stair["number_of_risers"]
-            elif param == "number_of_risers" and updated_stair.get("h"):
-                updated_stair["climb_height"] = updated_stair["h"] * updated_stair["number_of_risers"]
-            elif param == "climb_height" and updated_stair.get("number_of_risers"):
-                updated_stair["h"] = updated_stair["climb_height"] / updated_stair["number_of_risers"]
-        elif key[0] == "IfcRailing" and param == "height h":
-            updated_mep["guardrail_height"] = new_val
+            visual_param = {"number of risers": "number_of_risers", "climb height": "climb_height"}.get(param, param)
+            updated_stair[visual_param] = new_val
+            if param in ("h", "number of risers"):
+                h_new = updated_stair.get("h")
+                n_new = updated_stair.get("number_of_risers")
+                updated_stair["climb_height"] = h_new * n_new if h_new is not None and n_new is not None else None
+        elif key[0] == "IfcRailing" and param in ("height h", "guardrail height", "guardrail_height"):
+            from rdf_mapper import extract_railing_classification
+            if extract_railing_classification(comp_data[key]) == "guardrail":
+                if param != "height h" or comp_data[key].get("guardrail height") is None:
+                    updated_mep["guardrail_height"] = new_val
         elif key[0] == "IfcFireSuppressionTerminal":
             comp_name = comp_data[key].get("name", "").lower()
             if "hose" in comp_name:
@@ -3166,51 +3121,7 @@ def check_mep_conflicts(result_state, status_label, output_text):
             stair_params["g"] = data.get("g")
             stair_params["number of risers"] = data.get("number of risers")
             stair_params["climb height"] = data.get("climb height")
-        if key[0] == "IfcRailing":
-            stair_params["guardrail_height"] = data.get("height h")
-
-    # If guardrail_height still missing, read directly from IFC
-    if stair_params["guardrail_height"] is None:
-        try:
-            import ifcopenshell
-            ifc_path = result_state.get("ifc_file", "")
-            if ifc_path and os.path.exists(ifc_path):
-                model = ifcopenshell.open(ifc_path)
-                railings = model.by_type("IfcRailing")
-                for railing in railings:
-                    for rel in getattr(railing, "IsDefinedBy", []):
-                        if not rel.is_a("IfcRelDefinesByProperties"):
-                            continue
-                        pdef = rel.RelatingPropertyDefinition
-                        height_val = None
-                        if pdef.is_a("IfcElementQuantity"):
-                            for q in getattr(pdef, "Quantities", []):
-                                if getattr(q, "Name", "") == "Height" and hasattr(q, "LengthValue"):
-                                    height_val = q.LengthValue
-                                    break
-                        elif pdef.is_a("IfcPropertySet"):
-                            for prop in getattr(pdef, "HasProperties", []):
-                                if prop.is_a("IfcPropertySingleValue") and getattr(prop, "Name", "") == "Height":
-                                    val = getattr(prop, "NominalValue", None)
-                                    if val is not None:
-                                        if hasattr(val, "wrappedValue"):
-                                            height_val = val.wrappedValue
-                                        else:
-                                            height_val = val
-                                    break
-                        if height_val is not None:
-                            stair_params["guardrail_height"] = float(height_val)
-                            print(f"Direct IFC read guardrail height = {height_val} mm")
-                            break
-                    if stair_params["guardrail_height"] is not None:
-                        break
-        except Exception as e:
-            print(f"Could not read guardrail height from IFC: {e}")
-
-    # Fallback default
-    if stair_params["guardrail_height"] is None:
-        stair_params["guardrail_height"] = 1100.0
-        print("guardrail_height missing, using default 1100 mm")
+    stair_params["guardrail_height"] = mep_guardrail_height(comp_data)
 
     print("\n===== FINAL stair_params =====")
     print(stair_params)
@@ -3227,11 +3138,11 @@ def check_mep_conflicts(result_state, status_label, output_text):
     found_mep = False
 
     mep_rules = {
-        16: {"text": "Fire hose valve conflict with guardrail when risers>12 and hose height 900-1500",
+        16: {"text": "Illustrative: risers >12, guardrail height >=1100 mm, hose installation height 900–1500 mm",
              "type": "fire_hose", "param": "fire_hose_height"},
-        17: {"text": "Cabinet protrusion >100mm with stair width <1200 or climb>6000",
+        17: {"text": "Illustrative: cabinet depth >100 mm and (tread length <1200 mm or climb >6000 mm)",
              "type": "cabinet", "param": "cabinet_depth"},
-        18: {"text": "Outlet in danger zone (600-1200mm) when riser>190 or tread<240",
+        18: {"text": "Illustrative: outlet installation height 600–1200 mm and (riser >190 mm or tread <240 mm)",
              "type": "outlet", "param": "outlet_height"}
     }
 

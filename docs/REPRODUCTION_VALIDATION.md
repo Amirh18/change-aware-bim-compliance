@@ -1,46 +1,53 @@
-# Reproduction validation — 72-case synthetic IFC mutation study
+# Reproduction validation — corrected 72-case synthetic IFC mutation study
 
-**Validation run:** 2026-11-20 (UTC)  
-**Scope:** Controlled synthetic IFC4 fixture mutations; **not** independent regulatory certification or end-to-end reproduction of the nonpublic large-model experiments.
+**Recorded run:** 2026-11-22 (UTC)
+**Scope:** Controlled synthetic IFC4 fixture mutations; not independent regulatory certification or reproduction of the nonpublic large-model experiments.
 
 ## Execution and provenance
 
-The research team ran the organized repository's full study using Python 3.11.1 (64-bit) on Windows 10:
+The supplied JSON records Python 3.11.1 (64-bit) on Windows 10, with 30 full and 30 scoped timing samples per case. The reproduction command is:
 
 ```cmd
-python tests/test_rule_regressions.py
 python src/run_mutation_study.py --limit 72 --timing-repetitions 30 --out reproduced_72.json
 ```
 
-The generated `reproduced_72.json` and `reproduced_72.csv` were supplied for comparison with the original committed `data/results/mutation_results_72_repetitions30.json`. The complete rerun JSON had SHA-256 `a592ec88507fe50a6fca83ca27f2ba4b6542d74f912d6aac935acaffd9182033`; this new output is **not** included in the minimal release, but its summary and checksum are recorded here.
+The corrected JSON and CSV are distributed byte-for-byte under `data/results/mutation_results_72_repetitions30.json` and `.csv`. The source fixture SHA-256 is `737ac58bd9e1a7480c40bb160b6711981a8d3ed56b60129403b430251df4eaca`. The original v1.0.0 run remains in its archived version; it is not the authoritative result for the corrected Rule 13 implementation.
 
-## Results
+## Corrected recorded results
 
-| Measure | Original run | Reproduced run |
-| --- | ---: | ---: |
-| Completed / requested mutation cases | 72 / 72 | 72 / 72 |
-| Protocol expectations matched | 72 / 72 | 72 / 72 |
-| Execution errors | 0 | 0 |
-| Class-scoped missed outward rule changes | 0 | 0 |
-| GUI analyzer missed outward rule changes | 0 | 0 |
-| GUI analyzer extra outward rule changes | 1 (M050) | 1 (M050) |
-| Cases with SHACL disagreements | 0 | 0 |
-| Full rule-check time: median across case means | 145.467 ms | 144.186 ms |
-| Scoped rule-check time: median across case means | 125.994 ms | 124.990 ms |
-| Full/scoped ratio: median across per-case ratios | 1.156875× | 1.151955× |
-| Cases with lower scoped mean time | 71 / 72 | 72 / 72 |
+| Measure | Corrected run |
+| --- | ---: |
+| Completed / requested | 72 / 72 |
+| Protocol target expectations matched | 72 / 72 |
+| Execution errors | 0 |
+| Class-scoped missed detailed rule changes | 0 |
+| Class-scoped extra detailed rule changes | 0 |
+| Class-scoped missed outward rule changes | 0 |
+| GUI analyzer missed outward changes | 0 |
+| GUI analyzer extra outward changes | 1 (M050, R1) |
+| Cases with SPARQL–SHACL disagreement | 0 |
+| Median full-check per-case mean | 137.960 ms |
+| Median scoped-check per-case mean | 128.336 ms |
+| Median of per-case full/scoped mean ratios | 1.078029× |
+| Cases with lower scoped mean | 72 / 72 |
 
-Each case contains **30 full-check samples and 30 scoped-check samples**. Automated comparison showed **identical rule-status maps and change-detection outcomes for all 72 cases** between the original and reproduced JSON files. Both runs identify the same additional GUI outcome in M050: GUI flags rule R1 although the full-outward rule changes are R3, R5, and R10. This discrepancy is reported rather than hidden.
+M050: full outward changes are R3, R5 and R10; the GUI additionally flags R1. Rule 13 cases M061–M065 use explicit landing height, including removal of that datum (M065: PASS to INSUFFICIENT_INFORMATION). No other core rule changes in those five cases. Timings cover SPARQL checks on already constructed graphs, excluding IFC parsing, extraction, graph construction and display.
 
-The original and reproduced runs identify the same input fixture checksum: SHA-256 `737ac58bd9e1a7480c40bb160b6711981a8d3ed56b60129403b430251df4eaca`.
+## Subsequent author-executed regression and baseline checks
 
-## Interpretation and limits
+The author reported successful execution of `tests/test_rule_regressions.py`, `tests/test_rule13_ifc_mutations.py` and `tests/test_mep_illustrative.py` after the MEP/GUI corrections. These include the 1099/1100 mm Rule 13 boundary, M061–M065, MEP PASS/FAIL/N/A handling, no default guardrail height, and synthetic M015 transitions R1, R3, R5 and R18. The separate baseline report (2026-11-24 UTC) records agreement among procedural, SPARQL and SHACL outward statuses for 28 model-rule combinations: mutation base 10 PASS, 0 FAIL, 4 N/A; illustrative model 5 PASS, 5 FAIL, 4 N/A. Both have one stair flight and one railing; they do not exercise mixed-target aggregation. The original fixtures lack UnitsInContext; generated mutation copies explicitly assign millimetres.
 
-- The 72 cases are controlled edits generated from one synthetic source IFC; they are **not** 72 independent projects or expert-verified regulatory truth cases.
-- These benchmark times cover SPARQL rule evaluation on **already built RDF graphs**. They exclude IFC parsing, RDF extraction/construction, and display; do not interpret them as end-to-end performance.
-- Some per-case timing ratios become unusually large when few/no rules require rechecking. Report the median-of-ratios with this qualification, not as an expected universal acceleration.
-- The fixture initially lacked `UnitsInContext`; temporary generated copies explicitly declare millimetres.
-- The original 18-file suite, proprietary-source large-model experiments, and independently assessed legal/regulatory rule applicability are **not** reproduced by this distribution.
-- This record documents an **author-executed** reproducibility run and comparison of supplied output files; it is not an independently operated third-party test.
+These later diagnostics are not a fresh 30-repetition run of the final release candidate. Before tagging, verify all 72 outcome maps against the archived corrected results with the final source (short timing repetition count is sufficient for outcome verification).
 
-For the original full machine-readable results, see `data/results/mutation_results_72_repetitions30.json`. For licensing and exclusions, see `LICENSES.md` and `README.md`.
+## Limits
+
+- One synthetic IFC source, not 72 independent projects or independently certified ground truth.
+- The 18-file suite and nonpublic saved-IFC and larger-model experiment are not independently reproducible from this package.
+- Regulatory applicability and physical-unit issues in the external model remain unverified.
+- MEP Rules 16–18 are illustrative Python checks, not active core SPARQL/SHACL constraints.
+- This report describes author-executed tests and analysis of supplied records, not a third-party independent execution.
+
+## SHA-256 of recorded files
+- `baseline_final_check.json`: `4abe26e05d7b1fe97a73463694ddc69f20df0b75cc04c22f6d96319f34892f76`
+- `mutation_results_72_repetitions30.csv`: `43d817f5b19f52e99e3e76beadd78f76a40ecbac727162a0916dede7fb0d98be`
+- `mutation_results_72_repetitions30.json`: `be4e0d4978088cb6081daa09ed2efbe856d45b57d26f3aefb921db8ad43f015e`

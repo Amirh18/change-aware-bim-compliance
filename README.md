@@ -11,8 +11,7 @@ the 72-case controlled mutation protocol, and the associated recorded experiment
 It does **not** contain the externally supplied IFC model used in the manuscript's
 larger-model case study. The complete 72-case synthetic mutation study was rerun
 successfully in the supported environment; see `docs/REPRODUCTION_VALIDATION.md`.
-The release is linked to a Zenodo archival record: https://zenodo.org/records/24406900.
-The version-specific DOI and record metadata should be verified on Zenodo before citation.
+This is the corrected v1.1.0 release candidate. The original v1.0.0 snapshot remains at https://zenodo.org/records/24406900. The new version-specific archive identifier is pending publication.
 
 ## Repository layout
 
@@ -32,9 +31,11 @@ change-aware-bim-compliance/
 │   ├── compliance_gui.py         GUI and rule implementations
 │   ├── rdf_mapper.py             IFC-to-RDF mapping
 │   ├── semantic_checks.py        SPARQL status classification
-│   └── stair_ontology.ttl        Ontology and SHACL shapes
+│   └── stair_ontology.ttl        OWL ontology (SHACL shapes are constructed in compliance_gui.py)
 ├── tests/
-│   └── test_rule_regressions.py   Targeted regression checks
+│   ├── test_rule_regressions.py   Targeted regression checks
+│   ├── test_rule13_ifc_mutations.py IFC-level Rule 13 checks
+│   └── test_mep_illustrative.py  Illustrative MEP checks
 ├── data/
 │   ├── fixtures/
 │   │   ├── stair_mep_mutation_base.ifc
@@ -42,7 +43,9 @@ change-aware-bim-compliance/
 │   ├── protocols/
 │   │   └── mutation_cases_72.json
 │   └── results/
-│       └── mutation_results_72_repetitions30.json
+│       ├── mutation_results_72_repetitions30.json
+│       ├── mutation_results_72_repetitions30.csv
+│       └── baseline_final_check.json
 └── docs/
     ├── DATA_AVAILABILITY_TEMPLATE.md
     ├── DATA_DICTIONARY.md
@@ -66,7 +69,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-### Run the regression test
+### Run the regression tests
 
 ```powershell
 python tests/test_rule_regressions.py
@@ -76,6 +79,7 @@ python tests/test_rule_regressions.py
 
 ```powershell
 python tests/test_rule13_ifc_mutations.py
+python tests/test_mep_illustrative.py
 ```
 
 This verifies that M061–M065 create, mutate, and remove the dedicated
@@ -96,8 +100,10 @@ Then execute all 72 synthetic cases, with 30 timing repetitions per case:
 python src/run_mutation_study.py --limit 72 --timing-repetitions 30 --out reproduced_72.json
 ```
 
-Results from the completed original experiment are deposited at
-`data/results/mutation_results_72_repetitions30.json`.
+The corrected author-executed experiment of 2026-11-22 is deposited at
+`data/results/mutation_results_72_repetitions30.json` and its CSV companion.
+A separate baseline diagnostic of 2026-11-24 UTC is deposited at
+`data/results/baseline_final_check.json`. Timing values are observations, not exact reproducibility targets.
 
 ### Optional baseline checks
 
@@ -105,6 +111,8 @@ Results from the completed original experiment are deposited at
 python src/run_ifc_baseline.py --models "data/fixtures/stair_mep_mutation_base.ifc" "data/fixtures/stair_mep_illustrative_pass.ifc" --out baseline_local.json
 python src/benchmark_full_pipeline.py --models "data/fixtures/stair_mep_mutation_base.ifc" --repetitions 3 --out baseline_timing_local.json
 ```
+
+For optional GUI visualization, install `matplotlib`, `numpy`, and `networkx` in the same environment, then run `python src/compliance_gui.py`.
 
 ## Interpretation and research limitations
 
@@ -120,27 +128,25 @@ python src/benchmark_full_pipeline.py --models "data/fixtures/stair_mep_mutation
 - The actual saved-IFC comparison in the manuscript was performed on a separate, nonpublic
   model and is **not** independently reproducible here. Do not describe this archive as
   providing end-to-end reproduction of that experiment.
+- Rule 13 uses a dedicated `LandingHandrail` target and `hasLandingHandrailHeight` measurement, not generic railing height.
+- Rules 16–18 are illustrative Python-based MEP checks outside the 14-rule semantic experiment. Visualizations are schematic, not to scale; they do not establish geometric clearance or regulatory compliance.
 - The synthetic M050 GUI outcome disagreed with the other checking implementations;
   this extra outcome is retained in the results, not concealed.
 - The regulatory applicability of the 14 implemented checks and the mixed physical-unit
   issue identified in the external model remain unverified.
 - `stair_mep_illustrative_pass.ifc` is an **illustrative fixture** whose compliance
-  status has not been independently certified; its filename is not a regulatory endorsement.
+  status has not been independently certified; in the latest baseline diagnostic it fails core Rules 1, 2, 3, 5 and 11. Its filename is not a regulatory endorsement.
 
 ## Licensing and citation
 
 Software and ontology: **MIT**. Original synthetic IFC fixtures, mutation definitions,
 recorded results and documentation: **CC BY 4.0**. See `LICENSES.md`.
 
-See the [Zenodo archival record](https://zenodo.org/records/24406900) for the versioned deposit.
-Use `CITATION.cff` for repository citation metadata. Verify the version DOI from Zenodo
-before inserting it into the manuscript; do not substitute the concept DOI accidentally.
+The original [v1.0.0 Zenodo record](https://zenodo.org/records/24406900) is retained for provenance; it does not contain this corrected version. Use `CITATION.cff` for source metadata. Cite the corrected version-specific DOI once the new archive has been published and verified.
 
 ## Release status
 
-- The repository is public and the user supplied the versioned Zenodo record: https://zenodo.org/records/24406900.
-- The regression and 72-case study were rerun in Python 3.11.1 (see validation report).
-- The externally supplied model is excluded from the public package.
-- The MIT code license and CC BY 4.0 synthetic-data license are explained in `LICENSES.md`.
-- Confirm the DOI, authors, and license metadata on Zenodo before using the archive citation in a manuscript.
-- Updates to this branch **after** the tagged release do not change the already archived v1.0.0 snapshot.
+- Corrected v1.1.0 candidate; GitHub release and new Zenodo version pending.
+- The corrected 72-case results were recorded on 2026-11-22 UTC. Subsequent baseline and MEP/Rule 13 regression checks were author-executed; a fresh all-case outcome-only verification of the final code is recommended before release.
+- The externally supplied model is excluded. Preserve existing licenses and fixture bytes.
+- Verify the release file manifest, tag, archive metadata and version-specific DOI before manuscript submission.

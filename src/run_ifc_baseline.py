@@ -68,10 +68,19 @@ def execute_one(ui, path):
     sp_rows,sp_summary,sp_totals=ui.evaluate_rules_via_sparql(graph)
     sh_rows,sh_summary,sh_totals=ui.evaluate_rules_via_shacl(graph)
     legacy_summary,legacy_totals=ui.build_rule_summary(legacy)
+
     def by_rule(summary):
-        return {int(row['rule_number']): next((status for status in ('PASS','FAIL','N/A')
-                                               if int(row.get(status,0))>0), 'N/A')
-                for row in summary}
+        return {
+            int(row['rule_number']): next(
+                (
+                    status
+                    for status in ('FAIL', 'PASS', 'N/A')
+                    if int(row.get(status, 0)) > 0
+                ),
+                'N/A'
+            )
+            for row in summary
+        }
     proc_status=by_rule(legacy_summary)
     sparql_status=by_rule(sp_summary)
     shacl_status=by_rule(sh_summary)
