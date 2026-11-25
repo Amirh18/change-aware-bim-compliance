@@ -11,7 +11,7 @@ The supplied JSON records Python 3.11.1 (64-bit) on Windows 10, with 30 full and
 python src/run_mutation_study.py --limit 72 --timing-repetitions 30 --out reproduced_72.json
 ```
 
-The corrected JSON and CSV are distributed byte-for-byte under `data/results/mutation_results_72_repetitions30.json` and `.csv`. The source fixture SHA-256 is `737ac58bd9e1a7480c40bb160b6711981a8d3ed56b60129403b430251df4eaca`. The original v1.0.0 run remains in its archived version; it is not the authoritative result for the corrected Rule 13 implementation.
+The corrected JSON and CSV are distributed with unchanged numerical content (Git normalizes text line endings) under `data/results/mutation_results_72_repetitions30.json` and `.csv`. The source fixture SHA-256 is `737ac58bd9e1a7480c40bb160b6711981a8d3ed56b60129403b430251df4eaca`. The original v1.0.0 run remains in its archived version; it is not the authoritative result for the corrected Rule 13 implementation.
 
 ## Corrected recorded results
 
@@ -37,7 +37,7 @@ M050: full outward changes are R3, R5 and R10; the GUI additionally flags R1. Ru
 
 The author reported successful execution of `tests/test_rule_regressions.py`, `tests/test_rule13_ifc_mutations.py` and `tests/test_mep_illustrative.py` after the MEP/GUI corrections. These include the 1099/1100 mm Rule 13 boundary, M061–M065, MEP PASS/FAIL/N/A handling, no default guardrail height, and synthetic M015 transitions R1, R3, R5 and R18. The separate baseline report (2026-11-24 UTC) records agreement among procedural, SPARQL and SHACL outward statuses for 28 model-rule combinations: mutation base 10 PASS, 0 FAIL, 4 N/A; illustrative model 5 PASS, 5 FAIL, 4 N/A. Both have one stair flight and one railing; they do not exercise mixed-target aggregation. The original fixtures lack UnitsInContext; generated mutation copies explicitly assign millimetres.
 
-These later diagnostics are not a fresh 30-repetition run of the final release candidate. Before tagging, verify all 72 outcome maps against the archived corrected results with the final source (short timing repetition count is sufficient for outcome verification).
+The final 72-case outcome-only verification on 2026-11-24 UTC used one timing repetition per method and case. All non-timing case fields match the corrected 30-repetition run. See `data/results/final_verification_72.json`. The November 22 run remains the primary performance record. The published archive is https://doi.org/10.5281/zenodo.24518101.
 
 ## Limits
 
@@ -47,7 +47,9 @@ These later diagnostics are not a fresh 30-repetition run of the final release c
 - MEP Rules 16–18 are illustrative Python checks, not active core SPARQL/SHACL constraints.
 - This report describes author-executed tests and analysis of supplied records, not a third-party independent execution.
 
-## SHA-256 of recorded files
-- `baseline_final_check.json`: `4abe26e05d7b1fe97a73463694ddc69f20df0b75cc04c22f6d96319f34892f76`
-- `mutation_results_72_repetitions30.csv`: `43d817f5b19f52e99e3e76beadd78f76a40ecbac727162a0916dede7fb0d98be`
-- `mutation_results_72_repetitions30.json`: `be4e0d4978088cb6081daa09ed2efbe856d45b57d26f3aefb921db8ad43f015e`
+## SHA-256 of archived result files (LF-normalized)
+
+- `data/results/baseline_final_check.json`: `87ec22c6ddf99ea94a282300369feb28639f3e1493ddd29f35515326885c62c1`
+- `data/results/final_verification_72.json`: `cacb849daaedd7ba8253792d17edf5694c54e976e1974a0d5f973ffa4b9bb24a`
+- `data/results/mutation_results_72_repetitions30.csv`: `909d67ed5879bf1c9c3453f8e3c5fcd9f14faffb08b9c9deee9c30720572c346`
+- `data/results/mutation_results_72_repetitions30.json`: `d76c4f5f45da022e3358b7ac95008c42379fa6d7e0248bd0aab76814222bfc13`

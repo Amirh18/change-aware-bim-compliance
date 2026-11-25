@@ -1,10 +1,11 @@
 cff-version: 1.2.0
 message: >-
-  Cite the corrected version-specific research archive once published,
-  together with the associated journal manuscript.
+  Cite the corrected version-specific research archive together with the associated journal manuscript.
 title: "Change-Aware BIM Compliance Checking: Code and Synthetic IFC Reproducibility Package"
 type: software
 version: "1.1.0"
+doi: "10.5281/zenodo.24518101"
+date-released: 2026-11-25
 url: "https://github.com/Amirh18/change-aware-bim-compliance"
 authors:
   - family-names: Asgari

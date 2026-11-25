@@ -11,7 +11,7 @@ the 72-case controlled mutation protocol, and the associated recorded experiment
 It does **not** contain the externally supplied IFC model used in the manuscript's
 larger-model case study. The complete 72-case synthetic mutation study was rerun
 successfully in the supported environment; see `docs/REPRODUCTION_VALIDATION.md`.
-This is the corrected v1.1.0 release candidate. The original v1.0.0 snapshot remains at https://zenodo.org/records/24406900. The new version-specific archive identifier is pending publication.
+This is the corrected v1.1.0 release. The original v1.0.0 snapshot remains at https://zenodo.org/records/24406900. The corrected archive is available at https://doi.org/10.5281/zenodo.24518101.
 
 ## Repository layout
 
@@ -45,7 +45,8 @@ change-aware-bim-compliance/
 │   └── results/
 │       ├── mutation_results_72_repetitions30.json
 │       ├── mutation_results_72_repetitions30.csv
-│       └── baseline_final_check.json
+│       ├── baseline_final_check.json
+│       └── final_verification_72.json
 └── docs/
     ├── DATA_AVAILABILITY_TEMPLATE.md
     ├── DATA_DICTIONARY.md
@@ -142,11 +143,11 @@ For optional GUI visualization, install `matplotlib`, `numpy`, and `networkx` in
 Software and ontology: **MIT**. Original synthetic IFC fixtures, mutation definitions,
 recorded results and documentation: **CC BY 4.0**. See `LICENSES.md`.
 
-The original [v1.0.0 Zenodo record](https://zenodo.org/records/24406900) is retained for provenance; it does not contain this corrected version. Use `CITATION.cff` for source metadata. Cite the corrected version-specific DOI once the new archive has been published and verified.
+The original [v1.0.0 Zenodo record](https://zenodo.org/records/24406900) is retained for provenance; it does not contain this corrected version. Use `CITATION.cff` for source metadata. Cite v1.1.0: https://doi.org/10.5281/zenodo.24518101.
 
 ## Release status
 
-- Corrected v1.1.0 candidate; GitHub release and new Zenodo version pending.
-- The corrected 72-case results were recorded on 2026-11-22 UTC. Subsequent baseline and MEP/Rule 13 regression checks were author-executed; a fresh all-case outcome-only verification of the final code is recommended before release.
+- Corrected v1.1.0 is published on GitHub and Zenodo: https://doi.org/10.5281/zenodo.24518101.
+- The corrected 72-case results were recorded on 2026-11-22 UTC. Subsequent baseline and MEP/Rule 13 regression checks were author-executed; the final 72-case outcome-only verification on 2026-11-24 UTC reproduced all non-timing case outcomes. See `data/results/final_verification_72.json`.
 - The externally supplied model is excluded. Preserve existing licenses and fixture bytes.
 - Verify the release file manifest, tag, archive metadata and version-specific DOI before manuscript submission.

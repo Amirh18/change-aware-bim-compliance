@@ -1,4 +1,4 @@
-﻿# v1.1.0 — Corrected Research Release
+# v1.1.0 — Corrected Research Release
 
 This release supersedes the original v1.0.0 research implementation for the corrected synthetic mutation experiment. The previously published archival snapshot remains unchanged (https://zenodo.org/records/24406900).
 
@@ -32,4 +32,4 @@ See `REPRODUCTION_VALIDATION.md` for detailed verification results and experimen
 
 ## Archival Status
 
-The original v1.0.0 Zenodo record is preserved for provenance. A corresponding version-specific Zenodo archive for v1.1.0 is pending publication.
+The original v1.0.0 Zenodo record is preserved for provenance. The corrected version-specific Zenodo archive for v1.1.0 is published at https://doi.org/10.5281/zenodo.24518101. The release tag and archived files remain unchanged.
